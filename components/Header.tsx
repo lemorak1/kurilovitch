@@ -56,9 +56,7 @@ const Header = () => {
         {/* Menú de navegación */}
 
         <nav
-          className={`${styles.nav} ${
-            !menuOpen ? "block" : "hidden"
-          } md:hidden lg:flex`}
+          className={` hidden md:block lg:flex lg:justify-right xl:justify-evenly `}
         >
           {NAV_LINKS.map((link, index) => (
             <div key={index} className="relative group">
@@ -89,25 +87,37 @@ const Header = () => {
               )}
             </div>
           ))}
+          <div className={styles.authButtons}>
+            <button
+              className={`${styles.authButton} px-4 py-2 bg-primary text-white rounded hover:bg-muted`}
+            >
+              Login
+            </button>
+            <button
+              className={`${styles.authButton} px-4 py-2 bg-primary text-white rounded hover:bg-muted`}
+            >
+              Sign In
+            </button>
+          </div>
         </nav>
-
-        <div className={styles.authButtons}>
-          <button
-            className={`${styles.authButton} px-4 py-2 bg-primary text-white rounded hover:bg-muted`}
-          >
-            Login
-          </button>
-          <button
-            className={`${styles.authButton} px-4 py-2 bg-primary text-white rounded hover:bg-muted`}
-          >
-            Sign In
-          </button>
-        </div>
       </div>
 
       {/* Menú móvil desplegable */}
       {menuOpen && (
         <div className="lg:hidden absolute left-0 right-0 bg-white mt-2 p-4 shadow-lg">
+          <div className={` flex justify-center items-center space-x-4`}>
+            <button
+              // className={`${styles.authButton} px-4 py-2 bg-primary text-white rounded hover:bg-muted`}
+              className={`${styles.authButton} w-32 px-4 py-2 bg-blue-500 text-white rounded`}
+            >
+              Login
+            </button>
+            <button
+              className={`${styles.authButton} w-32 px-4 py-2 bg-blue-500 text-white rounded`}
+            >
+              Sign In
+            </button>
+          </div>
           {NAV_LINKS.map((link, index) => (
             <div key={index}>
               {link.dropdown ? (
