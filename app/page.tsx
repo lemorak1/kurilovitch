@@ -118,7 +118,7 @@ export default function Home() {
     <div>
       <Header />
       <h1>Bienvenido a la Plataforma</h1>
-      <p>Aquí puedes gestionar tus cursos y tareas</p>
+      <p>Aquí puedes gestionar tus cursos y tareas </p>
     </div>
   );
 }
