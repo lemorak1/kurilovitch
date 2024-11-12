@@ -48,11 +48,13 @@ const Header = () => {
       <div className="flex items-center justify-between p-4 w-full">
         {/* Logo */}
         <div className="flex items-center">
-          <img
-            src="/imagenes/Logo_Horizontal.png"
-            alt="Logo"
-            className={`${styles.logoImg} h-10`}
-          />
+          <Link href="/">
+            <img
+              src="/imagenes/Logo_Horizontal.png"
+              alt="Logo"
+              className={`${styles.logoImg} h-10`}
+            />
+          </Link>
         </div>
 
         {/* Botón de menú hamburguesa */}
