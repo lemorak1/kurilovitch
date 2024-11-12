@@ -71,7 +71,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
     e.preventDefault();
     if (validarCampos()) {
       console.log("Formulario enviado:", { ...formData, curso });
-      // Aquí prepararás la lógica para enviar a una base de datos
+      // Aquí prepararás la lógica para enviar a una base de datosjhvjfjyf
     }
   };
 
