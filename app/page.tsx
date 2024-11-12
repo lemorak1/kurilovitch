@@ -112,7 +112,7 @@
 //   );
 // }
 // /app/page.tsx o /pages/index.tsx dependiendo de la estructura
-import Header from "../components/Header"; // Ajusta la ruta según donde esté tu componente Header
+import Header from "../app/components/Header"; // Ajusta la ruta según donde esté tu componente Header
 export default function Home() {
   return (
     <div>

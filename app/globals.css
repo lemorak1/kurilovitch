@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --primary-color: #3498db;
-  --primary-foreground: #ffffff;
-  --secondary-color: #e74c3c;
-  --secondary-foreground: #ffffff;
-  --muted-background: #f2f2f2;
-  --card-background: #ffffff;
-  --text-color: #333333;
-} */
+:root {
+  --primary-color: none;
+  --primary-foreground: #fff;
+  --secondary-color: #4169e1;
+  --muted-background: #f0f0f0;
+  --card-background: #fff;
+  --text-color: #333;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -27,10 +26,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, #4169e1)
     rgb(var(--background-start-rgb));
 }

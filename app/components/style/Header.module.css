@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--primary-color);
+}
+
+.logoImg {
+  height: 40px;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownContainer {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.authButton {
+  background-color: #293ba2;
+  border-radius: 8px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.authButton:hover {
+  background-color: #1a1e6d;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
