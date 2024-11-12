@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import styles from "../components/style/Header.module.css";
+import styles from "./style/Header.module.css"; // Asegúrate de que la ruta sea correcta
 
 const NAV_LINKS = [
   {
     title: "Curso",
     dropdown: [
       { label: "English", path: "/courses/Ingles" },
-      { label: "Spanish", path: "/courses/spanish" },
-      { label: "French", path: "/courses/french" },
+      { label: "Spanish", path: "/courses/Ingles" },
+      { label: "French", path: "/courses/Ingles" },
     ],
   },
   { title: "Contactos", path: "/contactos" },
@@ -18,9 +18,9 @@ const NAV_LINKS = [
   {
     title: "Quiénes Somos",
     dropdown: [
-      { label: "Nuestra Historia", path: "/quienes-somos/historia" },
-      { label: "Equipo", path: "/quienes-somos/equipo" },
-      { label: "Misión y Visión", path: "/quienes-somos/mision-vision" },
+      { label: "Nuestra Historia", path: "/courses/Ingles" },
+      { label: "Equipo", path: "/courses/Ingles" },
+      { label: "Misión y Visión", path: "/courses/Ingles" },
     ],
   },
 ];
@@ -28,6 +28,9 @@ const NAV_LINKS = [
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Referencias para los dropdowns
+  const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleDropdown = (index: number) => {
     setShowDropdown(showDropdown === index ? null : index);
@@ -43,6 +46,27 @@ const Header = () => {
     setShowDropdown(null); // Cierra cualquier dropdown abierto también
   };
 
+  // Cerrar dropdown al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Si el menú móvil está abierto, no hacemos nada aquí
+      if (menuOpen) return;
+
+      if (
+        dropdownRefs.current.every(
+          (ref) => ref && !ref.contains(event.target as Node)
+        )
+      ) {
+        setShowDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   return (
     <header className={styles.header}>
       <div className="flex items-center justify-between p-4 w-full">
@@ -52,7 +76,7 @@ const Header = () => {
             <img
               src="/imagenes/Logo_Horizontal.png"
               alt="Logo"
-              className={`${styles.logoImg} h-10`}
+              className={`${styles.logoImg} h-10 cursor-pointer`}
             />
           </Link>
         </div>
@@ -93,13 +117,14 @@ const Header = () => {
                   </button>
                   {showDropdown === index && (
                     <div
+                      ref={(el) => (dropdownRefs.current[index] = el)}
                       className={`${styles.dropdownContainer} absolute bg-white shadow-md rounded mt-2`}
                     >
                       {link.dropdown.map((item, i) => (
                         <Link
                           key={i}
                           href={item.path || "#"}
-                          className="block px-4 py-2 hover:bg-gray-200"
+                          className={`block px-4 py-2 hover:bg-gray-200 ${styles.dropdownItem}`}
                         >
                           {item.label}
                         </Link>
@@ -132,31 +157,37 @@ const Header = () => {
 
       {/* Menú móvil transparente */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col p-4">
-          {/* Botón de cerrar */}
-          <button
-            onClick={closeMenu}
-            className="self-end text-white mb-4 focus:outline-none"
-          >
-            {/* Icono de cerrar */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex flex-col p-4"
+          onClick={closeMenu} // Cierra el menú al hacer clic fuera
+        >
           {/* Contenido del menú */}
-          <div className="bg-white p-6 rounded-md shadow-lg w-3/4 mx-auto">
+          <div
+            className="bg-white p-6 rounded-md shadow-lg w-3/4 mx-auto"
+            onClick={(e) => e.stopPropagation()} // Evita que el clic dentro del menú cierre el menú
+          >
+            {/* Botón de cerrar */}
+            <button
+              onClick={closeMenu}
+              className="self-end text-black mb-4 focus:outline-none"
+            >
+              {/* Icono de cerrar */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
             {NAV_LINKS.map((link, index) => (
               <div key={index} className="mb-4">
                 {link.dropdown ? (
@@ -173,7 +204,7 @@ const Header = () => {
                           <Link
                             key={i}
                             href={item.path || "#"}
-                            className="block px-4 py-2 hover:bg-gray-200"
+                            className="block px-4 py-2 hover:bg-gray-200 text-black"
                           >
                             {item.label}
                           </Link>

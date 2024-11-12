@@ -49,8 +49,13 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
     setFormData({ ...formData, prefijo: e.target.value });
   };
 
-  const handleFechaChange = (date: Date) => {
-    setFormData({ ...formData, fecha: date });
+  const handleFechaChange = (
+    value: Date | Date[],
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    if (value instanceof Date) {
+      setFormData({ ...formData, fecha: value });
+    }
   };
 
   const validarCampos = () => {

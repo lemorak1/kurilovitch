@@ -20,6 +20,10 @@
   z-index: 10;
 }
 
+.dropdownItem {
+  color: #000000; /* Texto negro para visibilidad */
+}
+
 .authButton {
   background-color: #293ba2;
   border-radius: 8px;
