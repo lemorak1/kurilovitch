@@ -9,8 +9,8 @@ const NAV_LINKS = [
     title: "Curso",
     dropdown: [
       { label: "English", path: "/courses/Ingles" },
-      { label: "Spanish", path: "/courses/Ingles" },
-      { label: "French", path: "/courses/Ingles" },
+      { label: "Spanish", path: "/courses/spanish" },
+      { label: "French", path: "/courses/french" },
     ],
   },
   { title: "Contactos", path: "/contactos" },
@@ -18,9 +18,9 @@ const NAV_LINKS = [
   {
     title: "Quiénes Somos",
     dropdown: [
-      { label: "Nuestra Historia", path: "/courses/Ingles" },
-      { label: "Equipo", path: "/courses/Ingles" },
-      { label: "Misión y Visión", path: "/courses/Ingles" },
+      { label: "Nuestra Historia", path: "/quienes-somos/historia" },
+      { label: "Equipo", path: "/quienes-somos/equipo" },
+      { label: "Misión y Visión", path: "/quienes-somos/mision-vision" },
     ],
   },
 ];
@@ -117,7 +117,9 @@ const Header = () => {
                   </button>
                   {showDropdown === index && (
                     <div
-                      ref={(el) => (dropdownRefs.current[index] = el)}
+                      ref={(el) => {
+                        dropdownRefs.current[index] = el;
+                      }}
                       className={`${styles.dropdownContainer} absolute bg-white shadow-md rounded mt-2`}
                     >
                       {link.dropdown.map((item, i) => (
