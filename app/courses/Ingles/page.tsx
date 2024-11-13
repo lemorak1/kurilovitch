@@ -11,12 +11,12 @@ const CursoIngles = () => {
 
   useEffect(() => {
     setHeaderColors({
-      backgroundColor: "#ffffff", // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
+      backgroundColor: "#000000", // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
     });
 
     return () => {
       setHeaderColors({
-        backgroundColor: "ffffff",
+        backgroundColor: "#000000",
         fontColor: "#000000",
       });
     };

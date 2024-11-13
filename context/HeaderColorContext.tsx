@@ -1,18 +1,28 @@
 // /context/HeaderColorContext.tsx
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
-interface HeaderColorContextProps {
-  headerColors: { backgroundColor?: string; fontColor?: string };
-  setHeaderColors: (colors: {
-    backgroundColor?: string;
-    fontColor?: string;
-  }) => void;
+// Definimos el tipo que permite colores opcionales
+interface HeaderColors {
+  backgroundColor?: string;
+  fontColor?: string;
 }
 
-const defaultColors = {
-  backgroundColor: "transparent", // Color de fondo predeterminado
-  fontColor: "#ffffff", // Color de texto predeterminado
+interface HeaderColorContextProps {
+  headerColors: HeaderColors;
+  setHeaderColors: Dispatch<SetStateAction<HeaderColors>>;
+}
+
+// Colores predeterminados
+const defaultColors: HeaderColors = {
+  backgroundColor: "transparent",
+  fontColor: "#000000",
 };
 
 const HeaderColorContext = createContext<HeaderColorContextProps | undefined>(
@@ -22,7 +32,7 @@ const HeaderColorContext = createContext<HeaderColorContextProps | undefined>(
 export const HeaderColorProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [headerColors, setHeaderColors] = useState(defaultColors);
+  const [headerColors, setHeaderColors] = useState<HeaderColors>(defaultColors);
 
   return (
     <HeaderColorContext.Provider value={{ headerColors, setHeaderColors }}>
