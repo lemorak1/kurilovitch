@@ -1,8 +1,10 @@
+// /components/Header.tsx
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import styles from "./style/Header.module.css"; // Asegúrate de que la ruta sea correcta
+import { useHeaderColorContext } from "../../context/HeaderColorContext";
+import styles from "./style/Header.module.css";
 
 const NAV_LINKS = [
   {
@@ -28,8 +30,9 @@ const NAV_LINKS = [
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState<number | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Referencias para los dropdowns
+  const { headerColors } = useHeaderColorContext();
+  const backgroundColor = headerColors.backgroundColor || "transparent";
+  const fontColor = headerColors.fontColor || "#000000";
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleDropdown = (index: number) => {
@@ -68,7 +71,10 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{ backgroundColor, color: fontColor }}
+    >
       <div className="flex items-center justify-between p-4 w-full">
         {/* Logo */}
         <div className="flex items-center">

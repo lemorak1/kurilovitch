@@ -1,17 +1,29 @@
+// /courses/Ingles.tsx
 "use client";
 
-import React from "react";
-import Header from "../../components/Header"; // Importamos el componente Header
-import TextoImagen from "../../components/textoImagen"; // Importamos el componente reutilizable TextoImagen
+import React, { useEffect } from "react";
+import { useHeaderColorContext } from "../../../context/HeaderColorContext";
+import TextoImagen from "../../components/textoImagen";
 import FormularioAgendarClase from "../../components/formularioAgendarClase";
 
 const CursoIngles = () => {
+  const { setHeaderColors } = useHeaderColorContext();
+
+  useEffect(() => {
+    setHeaderColors({
+      backgroundColor: "#ffffff", // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
+    });
+
+    return () => {
+      setHeaderColors({
+        backgroundColor: "ffffff",
+        fontColor: "#000000",
+      });
+    };
+  }, [setHeaderColors]);
+
   return (
     <div>
-      {/* Header */}
-      <Header />
-
-      {/* Sección 1: Imagen de fondo y texto superpuesto */}
       <section className="relative h-screen bg-blue-500 text-white flex items-center justify-center">
         <img
           src="/imagenes/cursos/ingles-bg.jpg"
@@ -25,8 +37,6 @@ const CursoIngles = () => {
           </p>
         </div>
       </section>
-
-      {/* Sección 2: Texto e Imagen Alternados */}
       <TextoImagen
         texto="Aprende inglés desde cero con materiales interactivos."
         imagen="/imagenes/cursos/ingles-1.jpg"
@@ -43,8 +53,6 @@ const CursoIngles = () => {
         posicion="left"
       />
       <FormularioAgendarClase colorFondo="#F0F4FF" curso="Curso de Inglés" />
-
-      {/* Footer (por ahora vacío, lo añadimos luego) */}
       <footer className="bg-gray-800 text-white py-4 text-center">
         © 2024 - KURILOVITCH Escuela de Idiomas
       </footer>

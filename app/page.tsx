@@ -116,7 +116,6 @@ import Header from "../app/components/Header"; // Ajusta la ruta según donde es
 export default function Home() {
   return (
     <div>
-      <Header />
       <h1>Bienvenido a la Plataforma</h1>
       <p>Aquí puedes gestionar tus cursos y tareas </p>
     </div>
