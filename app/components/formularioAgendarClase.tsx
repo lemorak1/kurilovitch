@@ -81,7 +81,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
       style={{ backgroundColor: colorFondo }}
     >
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl">
-        <h2 className="text-3xl font-bold text-center mb-6">
+        <h2 className="text-3xl font-bold text-center mb-6 text-black">
           Agenda una clase gratuita en {curso}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -92,7 +92,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 type="text"
                 name="nombre"
                 placeholder="Nombre"
-                className={`w-full border p-2 rounded ${
+                className={`w-full border p-2 rounded text-black ${
                   errores.nombre ? "border-red-500" : ""
                 }`}
                 value={formData.nombre}
@@ -104,7 +104,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 type="text"
                 name="apellido"
                 placeholder="Apellido"
-                className={`w-full border p-2 rounded ${
+                className={`w-full border p-2 rounded text-black ${
                   errores.apellido ? "border-red-500" : ""
                 }`}
                 value={formData.apellido}
@@ -118,7 +118,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 type="email"
                 name="correo"
                 placeholder="Correo"
-                className={`w-full border p-2 rounded ${
+                className={`w-full border p-2 rounded text-black ${
                   errores.correo ? "border-red-500" : ""
                 }`}
                 value={formData.correo}
@@ -130,7 +130,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 name="prefijo"
                 value={formData.prefijo}
                 onChange={handlePrefijoChange}
-                className="border p-2 rounded-l w-1/3"
+                className="border p-2 rounded-l w-1/3 text-black"
               >
                 {prefijosTelefono.map((prefijo) => (
                   <option key={prefijo.codigo} value={prefijo.codigo}>
@@ -142,7 +142,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 type="tel"
                 name="telefono"
                 placeholder="Teléfono"
-                className={`w-full border p-2 rounded-r ${
+                className={`w-full border p-2 rounded-r text-black ${
                   errores.telefono ? "border-red-500" : ""
                 }`}
                 value={formData.telefono}
@@ -156,7 +156,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
                 type="number"
                 name="edad"
                 placeholder="Edad"
-                className={`w-full border p-2 rounded ${
+                className={`w-full border p-2 rounded text-black ${
                   errores.edad ? "border-red-500" : ""
                 }`}
                 value={formData.edad}
@@ -167,7 +167,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
               <input
                 type="time"
                 name="hora"
-                className="w-full border p-2 rounded"
+                className="w-full border p-2 rounded text-black"
                 value={formData.hora}
                 onChange={handleInputChange}
               />
@@ -181,7 +181,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
               selected={formData.fecha}
               onChange={handleFechaChange}
               dateFormat="dd/MM/yyyy"
-              className="w-full border p-2 rounded"
+              className="w-full border p-2 rounded text-black"
             />
           </div>
 

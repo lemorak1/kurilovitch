@@ -6,12 +6,16 @@ interface TextoImagenProps {
   texto: string;
   imagen: string;
   posicion: "left" | "right";
+  backgroundColor?: string; // Propiedad opcional para color de fondo
+  fontColor?: string; // Propiedad opcional para color de fuente
 }
 
 const TextoImagen: React.FC<TextoImagenProps> = ({
   texto,
   imagen,
   posicion,
+  backgroundColor = "#F7FAFC", // Color por defecto si no se pasa como prop
+  fontColor = "#333", // Color de texto por defecto si no se pasa como prop
 }) => {
   const isLeft = posicion === "left";
 
@@ -19,7 +23,8 @@ const TextoImagen: React.FC<TextoImagenProps> = ({
     <section
       className="min-h-screen flex flex-col md:flex-row items-center justify-center"
       style={{
-        backgroundColor: isLeft ? "#F7FAFC" : "#E2E8F0", // Cambia color de fondo según la posición
+        backgroundColor: backgroundColor,
+        color: fontColor,
       }}
     >
       {/* Imagen */}
@@ -40,6 +45,7 @@ const TextoImagen: React.FC<TextoImagenProps> = ({
         className={`w-full md:w-1/2 p-8 ${
           isLeft ? "order-2" : "order-1"
         } text-center md:text-left`}
+        style={{ color: fontColor }} // Asegura que el color de fuente se aplique también aquí
       >
         <p className="text-lg md:text-xl font-medium">{texto}</p>
       </div>

@@ -41,16 +41,22 @@ const CursoIngles = () => {
         texto="Aprende inglés desde cero con materiales interactivos."
         imagen="/imagenes/cursos/ingles-1.jpg"
         posicion="left"
+        backgroundColor="#C0C0C0" // Color de fondo personalizado
+        fontColor="#01579b" // Color de texto personalizado
       />
       <TextoImagen
         texto="Mejora tu pronunciación y comprensión auditiva."
         imagen="/imagenes/cursos/ingles-2.jpg"
         posicion="right"
+        backgroundColor="#e0f7fa" // Color de fondo personalizado
+        fontColor="#01579b" // Color de texto personalizado
       />
       <TextoImagen
         texto="Prepárate para exámenes internacionales como TOEFL y IELTS."
         imagen="/imagenes/cursos/ingles-3.jpg"
         posicion="left"
+        backgroundColor="#C0C0C0" // Color de fondo personalizado
+        fontColor="#01579b" // Color de texto personalizado
       />
       <FormularioAgendarClase colorFondo="#F0F4FF" curso="Curso de Inglés" />
       <footer className="bg-gray-800 text-white py-4 text-center">
