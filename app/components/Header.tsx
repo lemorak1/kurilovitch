@@ -118,6 +118,7 @@ const Header = () => {
                   <button
                     className={`${styles.button} text-white px-4`}
                     onClick={() => toggleDropdown(index)}
+                    style={{ color: fontColor }}
                   >
                     {link.title}
                   </button>
@@ -144,6 +145,7 @@ const Header = () => {
                 <Link
                   href={link.path || "#"}
                   className={`${styles.button} text-white px-4 hover:underline`}
+                  style={{ color: fontColor }}
                 >
                   {link.title}
                 </Link>

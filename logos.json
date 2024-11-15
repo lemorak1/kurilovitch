@@ -1,0 +1,7 @@
+
+[
+    { "id": 1, "src": "./public/imagenes/logos/logo1.png", "alt": "Logo 1" },
+    { "id": 2, "src": "./public/imagenes/logos/logo2.png", "alt": "Logo 2" },
+    { "id": 3, "src": "./public/imagenes/logos/logo3.png", "alt": "Logo 3" },
+    { "id": 4, "src": "./public/imagenes/logos/logo4.png", "alt": "Logo 4" }
+  ]

@@ -21,7 +21,7 @@ interface HeaderColorContextProps {
 
 // Colores predeterminados
 const defaultColors: HeaderColors = {
-  backgroundColor: "transparent",
+  backgroundColor: "#64aaf1",
   fontColor: "#000000",
 };
 
