@@ -18,12 +18,8 @@ const NAV_LINKS = [
   { title: "Contactos", path: "/contactos" },
   { title: "Blog", path: "/blog" },
   {
-    title: "Quiénes Somos",
-    dropdown: [
-      { label: "Nuestra Historia", path: "/quienes-somos/historia" },
-      { label: "Equipo", path: "/quienes-somos/equipo" },
-      { label: "Misión y Visión", path: "/quienes-somos/mision-vision" },
-    ],
+    title: "Quiénes Somos",path:"/about"
+   
   },
 ];
 

@@ -26,7 +26,7 @@ const CursoIngles = () => {
     <div>
       <section className="relative h-screen bg-blue-500 text-white flex items-center justify-center">
         <img
-          src="/imagenes/cursos/ingles-bg.jpg"
+          src="/imagenes/Courses/Ingles/ingles-1.jpg"
           alt="Curso de Inglés"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -39,29 +39,27 @@ const CursoIngles = () => {
       </section>
       <TextoImagen
         texto="Aprende inglés desde cero con materiales interactivos."
-        imagen="/imagenes/cursos/ingles-1.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-1.jpg"
         posicion="left"
         backgroundColor="#C0C0C0" // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
       <TextoImagen
         texto="Mejora tu pronunciación y comprensión auditiva."
-        imagen="/imagenes/cursos/ingles-2.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
         posicion="right"
         backgroundColor="#e0f7fa" // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
       <TextoImagen
         texto="Prepárate para exámenes internacionales como TOEFL y IELTS."
-        imagen="/imagenes/cursos/ingles-3.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-3.jpg"
         posicion="left"
         backgroundColor="#C0C0C0" // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
-      <FormularioAgendarClase colorFondo="#F0F4FF" curso="Curso de Inglés" />
-      <footer className="bg-gray-800 text-white py-4 text-center">
-        © 2024 - KURILOVITCH Escuela de Idiomas
-      </footer>
+      <FormularioAgendarClase colorFondo="#F0F4FF" curso="Agenda una clase gratuita en Curso de Inglés" />
+     
     </div>
   );
 };

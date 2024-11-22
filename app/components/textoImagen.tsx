@@ -14,8 +14,8 @@ const TextoImagen: React.FC<TextoImagenProps> = ({
   texto,
   imagen,
   posicion,
-  backgroundColor = "#F7FAFC", // Color por defecto si no se pasa como prop
-  fontColor = "#333", // Color de texto por defecto si no se pasa como prop
+  backgroundColor = "#F7FAFC", // Color por defecto
+  fontColor = "#333", // Color de texto por defecto
 }) => {
   const isLeft = posicion === "left";
 
@@ -23,20 +23,24 @@ const TextoImagen: React.FC<TextoImagenProps> = ({
     <section
       className="min-h-screen flex flex-col md:flex-row items-center justify-center"
       style={{
-        backgroundColor: backgroundColor,
+        backgroundColor,
         color: fontColor,
       }}
     >
       {/* Imagen */}
       <div
-        className={`w-full md:w-1/2 h-64 md:h-full ${
+        className={`w-full md:w-1/2 flex items-center justify-center ${
           isLeft ? "order-1" : "order-2"
-        } flex items-center`}
+        }`}
       >
         <img
           src={imagen}
           alt={texto}
-          className="w-full h-full object-cover rounded-lg shadow-lg"
+          className="w-auto max-w-[70%] max-h-[80%] object-contain rounded-lg shadow-lg"
+          style={{
+            height: "auto",
+            maxHeight: "400px", // Tamaño máximo en píxeles
+          }}
         />
       </div>
 
@@ -45,7 +49,6 @@ const TextoImagen: React.FC<TextoImagenProps> = ({
         className={`w-full md:w-1/2 p-8 ${
           isLeft ? "order-2" : "order-1"
         } text-center md:text-left`}
-        style={{ color: fontColor }} // Asegura que el color de fuente se aplique también aquí
       >
         <p className="text-lg md:text-xl font-medium">{texto}</p>
       </div>

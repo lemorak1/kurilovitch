@@ -82,7 +82,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
     >
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-2xl">
         <h2 className="text-3xl font-bold text-center mb-6 text-black">
-          Agenda una clase gratuita en {curso}
+           {curso}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Campos de entrada */}
