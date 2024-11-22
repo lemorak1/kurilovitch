@@ -25,7 +25,7 @@ export default function RootLayout({
           <main>{children}</main>{" "}
           {/* Aquí se renderiza el contenido de cada página */}
         </HeaderColorProvider>
-        <footer>{/* Aquí va el pie de página */}
+        <footer id="footer">{/* Aquí va el pie de página */}
         <Footer />
         </footer>
       </body>

@@ -15,12 +15,17 @@ const NAV_LINKS = [
       { label: "French", path: "/courses/french" },
     ],
   },
-  { title: "Contactos", path: "/contactos" },
-  { title: "Blog", path: "/blog" },
   {
-    title: "Quiénes Somos",path:"/about"
-   
+    title: "Contactos",
+    action: () => {
+      const footer = document.getElementById("footer");
+      if (footer) {
+        footer.scrollIntoView({ behavior: "smooth", block: "end" });
+      }
+    },
   },
+  { title: "Blog", path: "/blog" },
+  { title: "Quiénes Somos", path: "/about" },
 ];
 
 const Header = () => {
@@ -137,6 +142,14 @@ const Header = () => {
                     </div>
                   )}
                 </>
+              ) : link.action ? (
+                <button
+                  onClick={link.action}
+                  className={`${styles.button} text-white px-4 hover:underline`}
+                  style={{ color: fontColor }}
+                >
+                  {link.title}
+                </button>
               ) : (
                 <Link
                   href={link.path || "#"}
@@ -218,6 +231,13 @@ const Header = () => {
                       </div>
                     )}
                   </>
+                ) : link.action ? (
+                  <button
+                    onClick={link.action}
+                    className="text-black py-2 w-full text-left font-bold"
+                  >
+                    {link.title}
+                  </button>
                 ) : (
                   <Link
                     href={link.path || "#"}
