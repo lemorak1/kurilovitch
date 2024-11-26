@@ -1,28 +1,46 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface ImagenVideoProps {
   backgroundUrl: string; // URL de la imagen o video
   isVideo?: boolean; // Define si es video o imagen
   text?: string; // Texto superpuesto
-  buttonLabel?: string; // Etiqueta del botón
-  buttonLink?: string; // Enlace del botón
   backgroundColor?: string; // Color de fondo (por si el cliente quiere)
+  fitMode?: "cover" | "contain" | "fill" | "none" | "scale-down"; // Define cómo se ajusta el contenido
 }
 
 const ImagenVideo: React.FC<ImagenVideoProps> = ({
   backgroundUrl,
   isVideo = false,
   text = "",
-  buttonLabel = "Descubre más",
-  buttonLink = "#",
-  backgroundColor = "transparent", // Por defecto es transparente
+  backgroundColor = "transparent",
+  fitMode = "cover", // Por defecto, usa 'cover'
 }) => {
+  const [menuHeight, setMenuHeight] = useState(0);
+
+  useEffect(() => {
+    const updateMenuHeight = () => {
+      const header = document.querySelector("header");
+      if (header) {
+        setMenuHeight(header.offsetHeight);
+      }
+    };
+
+    updateMenuHeight();
+    window.addEventListener("resize", updateMenuHeight);
+    return () => {
+      window.removeEventListener("resize", updateMenuHeight);
+    };
+  }, []);
+
   return (
     <section
-      className="relative h-screen flex items-center justify-center text-center"
-      style={{ backgroundColor }}
+      className="relative flex items-center justify-center text-center"
+      style={{
+        backgroundColor,
+        height: `calc(100vh - ${menuHeight}px)`,
+      }}
     >
       {isVideo ? (
         <video
@@ -30,25 +48,25 @@ const ImagenVideo: React.FC<ImagenVideoProps> = ({
           autoPlay
           loop
           muted
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full"
+          style={{
+            objectFit: fitMode, // Utiliza la prop para definir el ajuste del contenido
+          }}
         ></video>
       ) : (
         <img
           src={backgroundUrl}
           alt="Scrolling Page Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full"
+          style={{
+            objectFit: fitMode, // Utiliza la prop para definir el ajuste del contenido
+          }}
         />
       )}
       <div className="relative z-10 text-white max-w-2xl px-4">
         <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg mb-6">
           {text}
         </h1>
-        <a
-          href={buttonLink}
-          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded shadow-lg transition duration-300"
-        >
-          {buttonLabel}
-        </a>
       </div>
     </section>
   );

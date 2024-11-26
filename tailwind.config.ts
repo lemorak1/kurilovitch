@@ -2,12 +2,22 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}", // Incluye las rutas de app
+    "./pages/**/*.{js,ts,jsx,tsx}", // Incluye las rutas de páginas
+    "./components/**/*.{js,ts,jsx,tsx}", // Incluye las rutas de componentes
   ],
 
   theme: {
     extend: {
+      keyframes: {
+        fadeInUp: {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeInUp: "fadeInUp 1s ease-out",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -17,4 +27,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

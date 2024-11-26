@@ -10,9 +10,11 @@ const NAV_LINKS = [
   {
     title: "Curso",
     dropdown: [
-      { label: "English", path: "/courses/Ingles" },
-      { label: "Spanish", path: "/courses/spanish" },
-      { label: "French", path: "/courses/french" },
+      // { label: "Ingles", path: "/courses/Ingles" },
+      { label: "Español", path: "/courses/Espanol" },
+      { label: "Aleman", path: "/courses/Aleman" },
+      { label: "Italiano", path: "/courses/Italiano" },
+      { label: "Ruso", path: "/courses/Ruso" },
     ],
   },
   {
@@ -83,7 +85,7 @@ const Header = () => {
             <img
               src="/imagenes/Logo_Horizontal.png"
               alt="Logo"
-              className={`${styles.logoImg} h-10 cursor-pointer`}
+              className={`${styles.logoImg} h-15 cursor-pointer`}
             />
           </Link>
         </div>

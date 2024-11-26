@@ -4,13 +4,18 @@ import React, { useState } from "react";
 import styles from "./style/SliceTexto.module.css";
 
 interface SliceTextoProps {
-  images: { url: string; text: string }[]; // Array de imágenes con texto
+  images: {
+    url: string; // URL de la imagen
+    title: string; // Título
+    description: string; // Descripción
+    link?: string; // Enlace opcional
+  }[];
   backgroundColor?: string; // Color de fondo opcional
 }
 
 const SliceTexto: React.FC<SliceTextoProps> = ({
   images,
-  backgroundColor = "#000000", // Fondo negro por defecto
+  backgroundColor = "#000000",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -22,11 +27,6 @@ const SliceTexto: React.FC<SliceTextoProps> = ({
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
-
-  const handleSwipe = (direction: "left" | "right") => {
-    if (direction === "left") nextSlide();
-    if (direction === "right") prevSlide();
   };
 
   return (
@@ -41,9 +41,22 @@ const SliceTexto: React.FC<SliceTextoProps> = ({
           backgroundImage: `url(${images[currentIndex].url})`,
         }}
       >
-        {/* Texto superpuesto */}
+        {/* Texto superpuesto en la parte inferior */}
         <div className={`${styles.textOverlay}`}>
-          <p>{images[currentIndex].text}</p>
+          <div className={`${styles.textContainer}`}>
+            <h2 className="text-2xl md:text-4xl font-bold mb-2">
+              {images[currentIndex].title}
+            </h2>
+            <p className="text-sm md:text-lg">{images[currentIndex].description}</p>
+            {images[currentIndex].link && (
+              <a
+                href={images[currentIndex].link}
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition mt-4 inline-block"
+              >
+                Ver más
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
@@ -55,7 +68,7 @@ const SliceTexto: React.FC<SliceTextoProps> = ({
         &#10095;
       </button>
 
-      {/* Indicadores (opcional) */}
+      {/* Indicadores */}
       <div className={`${styles.indicators}`}>
         {images.map((_, index) => (
           <button
