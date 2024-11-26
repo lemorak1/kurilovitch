@@ -133,7 +133,7 @@ const Home = () => {
             fontColor={font_color}
             mostrarBordes={true}
             textoSize="text-lg"
-            posicion={seccion.posicionImagen}
+            posicion={seccion.posicionImagen?"right":"left"}
             mostrarBoton={false} // No mostramos el botón por ahora
           />
           </ScrollPage>
