@@ -26,7 +26,7 @@ const data = {
 const AboutPage = () => {
     ;
     const { setHeaderColors } = useHeaderColorContext();
-
+let bg_color="#64aaf1"
     useEffect(() => {
         // setHeaderColors({
         //   backgroundColor: "#000000", // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
@@ -34,7 +34,7 @@ const AboutPage = () => {
 
         return () => {
             setHeaderColors({
-                backgroundColor: "#64aaf1",
+                backgroundColor: bg_color,
                 fontColor: "#000000",
             });
         };
@@ -57,17 +57,27 @@ const AboutPage = () => {
                 spacing={30}
             />
              <TextoImagen
-        texto="Prepárate para exámenes internacionales como TOEFL y IELTS."
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-3.jpg"
-        posicion="left"
-        backgroundColor="#C0C0C0" // Color de fondo personalizado
+        titulo="Bienvenido a Kourilovitch Institute"
+        parrafos={[
+          { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
+          { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
+          { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
+        ]}
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
+        posicion="right"
+        backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
       <TextoImagen
-        texto="Prepárate para exámenes internacionales como TOEFL y IELTS."
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-3.jpg"
+        titulo="Bienvenido a Kourilovitch Institute"
+        parrafos={[
+          { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
+          { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
+          { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
+        ]}
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
         posicion="right"
-        backgroundColor="#C0C0C0" // Color de fondo personalizado
+        backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
         </div>
