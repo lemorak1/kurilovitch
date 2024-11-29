@@ -1,9 +1,11 @@
-"use client";
+"use client"
 
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
+// import DatePicker from "";
+// import DatePicker from "./DatePicker.tsx";
+import DateTimePicker from "./DateTimePicker";
 interface FormularioAgendarClaseProps {
   colorFondo: string;
   curso: string;
@@ -177,7 +179,7 @@ const FormularioAgendarClase: React.FC<FormularioAgendarClaseProps> = ({
           {/* DatePicker */}
           <div className="mt-4">
             <label className="block mb-2">Fecha</label>
-            <DatePicker
+            <DateTimePicker
               selected={formData.fecha}
               onChange={handleFechaChange}
               dateFormat="dd/MM/yyyy"

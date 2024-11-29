@@ -1,62 +1,3 @@
-// "use client";
-
-// import React from "react";
-
-// interface TextoImagenProps {
-//   texto: string;
-//   imagen: string;
-//   posicion: "left" | "right";
-//   backgroundColor?: string; // Propiedad opcional para color de fondo
-//   fontColor?: string; // Propiedad opcional para color de fuente
-// }
-
-// const TextoImagen: React.FC<TextoImagenProps> = ({
-//   texto,
-//   imagen,
-//   posicion,
-//   backgroundColor = "#F7FAFC", // Color por defecto
-//   fontColor = "#333", // Color de texto por defecto
-// }) => {
-//   const isLeft = posicion === "left";
-
-//   return (
-//     <section
-//       className="min-h-screen flex flex-col md:flex-row items-center justify-center"
-//       style={{
-//         backgroundColor,
-//         color: fontColor,
-//       }}
-//     >
-//       {/* Imagen */}
-//       <div
-//         className={`w-full md:w-1/2 flex items-center justify-center ${
-//           isLeft ? "order-1" : "order-2"
-//         }`}
-//       >
-//         <img
-//           src={imagen}
-//           alt={texto}
-//           className="w-auto max-w-[70%] max-h-[80%] object-contain rounded-lg shadow-lg"
-//           style={{
-//             height: "auto",
-//             maxHeight: "400px", // Tamaño máximo en píxeles
-//           }}
-//         />
-//       </div>
-
-//       {/* Texto */}
-//       <div
-//         className={`w-full md:w-1/2 p-8 ${
-//           isLeft ? "order-2" : "order-1"
-//         } text-center md:text-left`}
-//       >
-//         <p className="text-lg md:text-xl font-medium">{texto}</p>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default TextoImagen;
 "use client";
 
 import React from "react";
@@ -73,7 +14,6 @@ interface TextoConImagenProps {
   botonLink?: string; // Enlace del botón
   textoSize?: string; // Tamaño del texto (p.ej. "text-sm", "text-lg")
   posicion?: "left" | "right"; // Posición de la imagen
- 
 }
 
 const TextoConImagen: React.FC<TextoConImagenProps> = ({
@@ -88,7 +28,6 @@ const TextoConImagen: React.FC<TextoConImagenProps> = ({
   botonLink = "#", // Enlace del botón
   textoSize = "text-base", // Tamaño del texto por defecto
   posicion = "left", // Posición de la imagen
-
 }) => {
   const isLeft = posicion === "left";
 
@@ -107,8 +46,8 @@ const TextoConImagen: React.FC<TextoConImagenProps> = ({
       {/* Imagen opcional */}
       {imagen && (
         <div
-          className={`w-full md:w-1/2 p-4 flex items-center justify-center ${
-            isLeft ? "order-1" : "order-2"
+          className={`w-full md:w-1/2 p-4 flex items-center justify-center order-1 ${
+            isLeft ? "md:order-1" : "md:order-2"
           }`}
         >
           <img
@@ -121,9 +60,9 @@ const TextoConImagen: React.FC<TextoConImagenProps> = ({
 
       {/* Texto */}
       <div
-        className={`w-full md:w-1/2 p-8 ${
-          isLeft ? "order-2" : "order-1"
-        } text-center md:text-left`}
+        className={`w-full md:w-1/2 p-8 text-center md:text-left order-2 ${
+          isLeft ? "md:order-2" : "md:order-1"
+        }`}
       >
         <h2 className="text-4xl font-bold mb-6">{titulo}</h2>
         {parrafos.map((parrafo, index) => (

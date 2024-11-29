@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Mapa */}
         <div className="w-full md:w-1/2">
-          <iframe
+          {/* <iframe
             title="Mapa de ubicación"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799145456!2d-74.2598678!3d40.6976701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzgnMzcnMzQuOCJOIDc0wrAxNicwNS45Ilc!5e0!3m2!1ses!2sec!4v1617182909481!5m2!1ses!2sec"
             width="100%"
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({
             style={{ border: 0 }}
             allowFullScreen={false}
             loading="lazy"
-          ></iframe>
+          ></iframe> */}
         </div>
 
         {/* Teléfono y Dirección */}

@@ -1,0 +1,42 @@
+/* styles.css */
+.date-time-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 400px; /* Mobile First */
+  }
+  
+  .date-time-picker label {
+    font-size: 0.875rem;
+    color: #6b7280; /* Gray-600 */
+    margin-bottom: 4px;
+  }
+  
+  .date-time-picker input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db; /* Gray-300 */
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .date-time-picker input:focus {
+    outline: none;
+    border-color: #3b82f6; /* Blue-500 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue-500 */
+  }
+  
+  @media (min-width: 768px) {
+    .date-time-picker {
+      max-width: 600px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .date-time-picker {
+      max-width: 800px;
+    }
+  }
+  
