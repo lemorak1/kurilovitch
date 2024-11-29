@@ -1,24 +1,32 @@
-"use client"
-import React from "react";
+"use client";
 
-const DateTimePicker = ({
+import React, { useState } from "react";
+
+interface DateTimePickerProps {
+  selected: Date | null; // La fecha seleccionada
+  onChange: (date: Date | null) => void; // Función para manejar el cambio de fecha
+  dateFormat?: string; // Formato de fecha (por defecto "yyyy-MM-dd")
+  className?: string; // Clases adicionales para estilos
+}
+
+const DateTimePicker: React.FC<DateTimePickerProps> = ({
   selected,
   onChange,
   dateFormat = "yyyy-MM-dd",
   className = "",
 }) => {
-  // Formatear la fecha para el input `type="date"`
-  const formatDate = (date, format) => {
-    const options = {};
+  // Formatear la fecha en función del formato dado
+  const formatDate = (date: Date, format: string): string => {
+    const options: Intl.DateTimeFormatOptions = {};
     if (format.includes("dd")) options.day = "2-digit";
     if (format.includes("MM")) options.month = "2-digit";
     if (format.includes("yyyy")) options.year = "numeric";
     return new Intl.DateTimeFormat("en-GB", options).format(date);
   };
 
-  const handleDateChange = (e) => {
-    const newDate = new Date(e.target.value);
-    onChange && onChange(newDate);
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newDate = e.target.value ? new Date(e.target.value) : null;
+    onChange(newDate);
   };
 
   return (
@@ -34,9 +42,13 @@ const DateTimePicker = ({
         <input
           type="date"
           id="date-picker"
-          value={selected ? formatDate(selected, dateFormat) : ""}
+          value={
+            selected
+              ? formatDate(selected, dateFormat)
+              : "" // Valor por defecto si no hay fecha seleccionada
+          }
           onChange={handleDateChange}
-          className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-black`}
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-black"
         />
       </div>
     </div>
