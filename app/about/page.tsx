@@ -2,8 +2,8 @@
 
 import React, { useEffect } from "react";
 import { useHeaderColorContext } from "../../context/HeaderColorContext";
-import ImagenVideo from "../components/ImagenVideo";
-import MisionVision from "../components/MisionVision";
+// import ImagenVideo from "../components/ImagenVideo";
+// import MisionVision from "../components/MisionVision";
 import TextoImagen from "../components/textoImagen";
 import HeroSection from "../components/HeroSection";
 
@@ -78,7 +78,7 @@ let bg_color="#64aaf1"
                 // buttonLabel="Descubre más"
                 // buttonLink="#"
             /> */}
-           
+
   {/* Intro Section */}
 
       <HeroSection
@@ -101,8 +101,8 @@ let bg_color="#64aaf1"
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
-      
-    
+
+
       <MisionVisionSection
       title = ""
       missionTitle="Mision"
@@ -118,7 +118,7 @@ let bg_color="#64aaf1"
         backgroundColor="#ffffff"
         fontColor="#333333"
       />
-          
+
             {/* <MisionVision
                 topTitle={data.topTitle}
                 columns={data.columns}
@@ -126,7 +126,7 @@ let bg_color="#64aaf1"
                 fontColor="#222"
                 spacing={30}
             />
-           
+
       <TextoImagen
         titulo="Bienvenido a Kourilovitch Institute"
         parrafos={[
