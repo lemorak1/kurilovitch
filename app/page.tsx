@@ -113,8 +113,9 @@ const Home = () => {
 
   return (
     <div className="scroll-container">
-      <ScrollPage>
+      <ScrollPage> 
         <ImagenVideo
+        key={Date.now()} // Esto forzará que el video se reinicie al recargar
           backgroundUrl="imagenes/Home/videoBienvenida.mp4"
           isVideo={true}
           fitMode="scale-down"
