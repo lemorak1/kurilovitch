@@ -38,8 +38,11 @@ const ImagenVideo: React.FC<ImagenVideoProps> = ({
     <section
       className="relative flex items-center justify-center text-center"
       style={{
+        position: "relative",
+        width: "100vw",
         backgroundColor,
         height: `calc(100vh - ${menuHeight}px)`,
+        overflow: "hidden",
       }}
     >
       {isVideo ? (
@@ -49,8 +52,15 @@ const ImagenVideo: React.FC<ImagenVideoProps> = ({
           loop
           muted
           className="absolute inset-0 w-full h-full"
+          
           style={{
-            objectFit: fitMode, // Utiliza la prop para definir el ajuste del contenido
+            width: "100%",
+            height: "100%",
+            objectFit: fitMode,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: -1,
           }}
         ></video>
       ) : (

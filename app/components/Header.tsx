@@ -10,11 +10,11 @@ const NAV_LINKS = [
   {
     title: "Curso",
     dropdown: [
-      // { label: "Ingles", path: "/courses/Ingles" },
-    //  { label: "Español", path: "/courses/Espanol" },
+     { label: "Ingles", path: "/courses/Ingles" },
+     { label: "Español", path: "/courses/Espanol" },
       { label: "Aleman", path: "/courses/Aleman" },
-      //{ label: "Italiano", path: "/courses/Italiano" },
-      //{ label: "Ruso", path: "/courses/Ruso" },
+    { label: "Italiano", path: "/courses/Italiano" },
+    { label: "Ruso", path: "/courses/Ruso" },
     ],
   },
   {
