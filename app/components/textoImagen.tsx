@@ -3,6 +3,7 @@
 import React from "react";
 
 interface TextoConImagenProps {
+  id?: string; // URL de la imagen (opcional)
   titulo: string; // Título principal
   parrafos: { texto: string; subtitulo?: string }[]; // Array de párrafos con opción de subtítulos
   imagen?: string; // URL de la imagen (opcional)
@@ -17,6 +18,7 @@ interface TextoConImagenProps {
 }
 
 const TextoConImagen: React.FC<TextoConImagenProps> = ({
+  id,
   titulo,
   parrafos,
   imagen,
@@ -33,6 +35,7 @@ const TextoConImagen: React.FC<TextoConImagenProps> = ({
 
   return (
     <section
+    id={id}
       className={`relative min-h-screen flex flex-col md:flex-row items-center justify-center p-8`}
       style={{ backgroundColor, color: fontColor }}
     >

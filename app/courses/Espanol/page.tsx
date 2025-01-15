@@ -1,84 +1,120 @@
-// /courses/Ingles.tsx
 "use client";
 
 import React, { useEffect } from "react";
 import { useHeaderColorContext } from "../../../context/HeaderColorContext";
-import TextoImagen from "../../components/textoImagen";
-import FormularioAgendarClase from "../../components/formularioAgendarClase";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Head from "next/head";
 
-const CursoEspanol = () => {
+const TextoImagen = dynamic(() => import("../../components/textoImagen"), {
+  ssr: false,
+});
+const FormularioAgendarClase = dynamic(() => import("../../components/formularioAgendarClase"), {
+  ssr: false,
+});
+const SliderLevels = dynamic(() => import("../../components/SliderLevels"), {
+  ssr: false,
+});
+
+const CursoEspañol = () => {
   const { setHeaderColors } = useHeaderColorContext();
-  let bg_color="#ffb100";
-  let font_color="#c73e1d";
+  const bg_color = "#ffb100";
+  const font_color = "#c73e1d";
 
   useEffect(() => {
-    setHeaderColors({
-      backgroundColor: bg_color,
-      fontColor: font_color, // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
-    });
-
-    return () => {
-      setHeaderColors({
-        backgroundColor: bg_color,
-        fontColor: font_color,
-      });
-    };
+    setHeaderColors({ backgroundColor: bg_color, fontColor: font_color });
   }, [setHeaderColors]);
 
+  const levels = [
+    {
+        level: "Curso Intensivo de Español Nivel A1",
+        description: "Curso diseñado para principiantes, proporcionando una base sólida para la comunicación en español.",
+        image: "/imagenes/Courses/Espanol/P_A1Espanol.jpg",
+        links: [{ text: "Más información", href: "#curso-a1-espanol" }],
+        cost: "$800",
+        duration: "11 semanas",
+        requirements: "Edad mínima de 14 años.",
+        benefits: [
+            "Clases en vivo, tanto presenciales en Cuenca como online.",
+            "Atención personalizada con grupos reducidos (máximo 5 alumnos).",
+            "Impartido por un profesor certificado en español, inglés, ruso y alemán.",
+            "Clases dictadas en ruso para facilitar el aprendizaje de estudiantes de habla rusa."
+        ]
+    },
+    {
+        level: "Curso Intensivo de Español Nivel A2",
+        description: "Curso para quienes desean consolidar sus conocimientos básicos y avanzar hacia una comunicación más fluida.",
+        image: "/imagenes/Courses/Espanol/P_A2Espanol.jpg",
+        links: [{ text: "Más información", href: "#curso-a2-espanol" }],
+        cost: "$800",
+        duration: "11 semanas",
+        requirements: "Nivel A1 aprobado y edad mínima de 14 años.",
+        benefits: [
+            "Clases en vivo, tanto presenciales en Cuenca como online.",
+            "Grupos reducidos con máximo 5 estudiantes para atención personalizada.",
+            "Metodología práctica con un enfoque comunicativo.",
+            "Impartido por un profesor certificado con experiencia en múltiples idiomas."
+        ]
+    }
+];
+
+
+
   return (
-    <div>
-      <section className="relative h-screen bg-blue-500 text-white flex items-center justify-center">
-        <img
-          src="/imagenes/Courses/Aleman/P_PrincipalAleman.jpg"
-          alt="Curso de Aleman"
-          className="absolute inset-0 w-full h-full object-cover"
+    <>
+      <Head>
+        <title>Curso Intensivo de Español - Kourilovitch Institute</title>
+        <meta name="description" content="Domina el español con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
+        <meta property="og:title" content="Curso Intensivo de Español - Kourilovitch Institute" />
+        <meta property="og:description" content="Domina el español con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
+        <meta property="og:image" content="/imagenes/Courses/Espanol/P_A1Espanol" />
+      </Head>
+      <div>
+        <section className="relative h-screen flex items-center justify-center text-white">
+          <Image
+            src="/imagenes/Courses/Espanol/P_PrincipalEspanol.jpg"
+            alt="Curso Intensivo de Español"
+            fill
+            quality={75}
+            priority
+            style={{ objectFit: "cover" }}
+          />
+          
+        </section>
+
+        <SliderLevels
+          title="Explora los Niveles de Español"
+          subtitle="Conoce las opciones para mejorar tus habilidades en español."
+          levels={levels}
+          backgroundColor={bg_color}
+          fontColor={font_color}
         />
-        <div className="relative z-10 text-center max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold"> </h1>
-          <p className="mt-4 text-lg md:text-xl">
 
-          </p>
-        </div>
-      </section>
-      <TextoImagen
-        titulo="Bienvenido a Kourilovitch Institute"
-        parrafos={[
-          { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
-          { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
-          { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
-        ]}
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-1.jpg"
-        posicion="left"
-        backgroundColor={bg_color} // Color de fondo personalizado
-        fontColor="#01579b" // Color de texto personalizado
-      />
-      <TextoImagen
-        titulo="Bienvenido a Kourilovitch Institute"
-        parrafos={[
-          { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
-          { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
-          { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
-        ]}
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
-        posicion="right"
-        backgroundColor={bg_color} // Color de fondo personalizado
-        fontColor="#01579b" // Color de texto personalizado
-      />
-      <TextoImagen
-        titulo="Bienvenido a Kourilovitch Institute"
-        parrafos={[
-          { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
-          { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
-          { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
-        ]} imagen="/imagenes/Courses/Ingles/ingles-profesor-3.jpg"
-        posicion="left"
-        backgroundColor={bg_color} // Color de fondo personalizado
-        fontColor="#01579b" // Color de texto personalizado
-      />
-      <FormularioAgendarClase colorFondo={bg_color} curso="Agenda una clase gratuita en Curso de Inglés" />
+        {levels.map((course, index) => (
+          <TextoImagen
+            key={index}
+            id={course.links[0].href.substring(1)}
+            titulo={course.level}
+            parrafos={[
+              { subtitulo: "¿Qué incluye?", texto: course.description },
+              { subtitulo: "Requisitos", texto: course.requirements },
+              { subtitulo: "Ventajas", texto: course.benefits.join("\n• ") },
+              { subtitulo: "Duración y Costo", texto: `Duración: ${course.duration}\nCosto: ${course.cost}` }
+            ]}
+            imagen={course.image}
+            backgroundColor={bg_color}
+            fontColor={font_color}
+            posicion={index % 2 === 0 ? "right" : "left"}
+          />
+        ))}
 
-    </div>
+        <FormularioAgendarClase
+          colorFondo={bg_color}
+          curso="Agenda una clase gratuita en nuestro Curso Intensivo de Español"
+        />
+      </div>
+    </>
   );
 };
 
-export default CursoEspanol;
+export default CursoEspañol;
