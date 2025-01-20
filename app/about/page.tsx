@@ -82,12 +82,7 @@ let bg_color="#64aaf1"
   {/* Intro Section */}
 
       <HeroSection
-      title="Bienvenidos a Kourilovitch Institute"
-      description="Transformamos el aprendizaje de idiomas en experiencias culturales y educativas de excelencia."
-      buttonText="Conócenos más"
-      buttonLink="#intro"
-      gradientFrom="blue-500"
-      gradientTo="blue-300"
+    videoUrl="imagenes/Home/videoBienvenida.mp4"
     />
       <TextoImagen
         titulo=""

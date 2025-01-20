@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
-const InstagramFeed = ({ accessToken }) => {
-  const [posts, setPosts] = useState([]);
+interface InstagramFeedProps {
+  accessToken: string;
+}
+const InstagramFeed: React.FC<InstagramFeedProps> = ({ accessToken }) => {
+  const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchInstagramPosts = async () => {
