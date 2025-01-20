@@ -12,6 +12,7 @@ interface ObjectivesProps {
   title: string;
   objectives: Objective[];
   backgroundColor?: string;
+  backgroundColor2?: string;
   fontColor?: string;
 }
 
@@ -19,6 +20,7 @@ const Objectives: React.FC<ObjectivesProps> = ({
   title,
   objectives,
   backgroundColor = "#f9f9f9",
+  backgroundColor2="#ffffff",
   fontColor = "#333",
 }) => {
   return (
@@ -36,7 +38,11 @@ const Objectives: React.FC<ObjectivesProps> = ({
         {objectives.map((objective, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition"
+            className="p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition"
+            style={{
+              backgroundColor: backgroundColor2,
+              color: fontColor,
+            }}
           >
             {objective.icon && (
               <div className="mb-4">

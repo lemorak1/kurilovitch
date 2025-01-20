@@ -70,15 +70,15 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <h4 className="text-lg font-semibold mb-4">Contactos</h4>
-          <p className="text-sm text-gray-600">Correo: <a href="mailto:info@kourilovitch.com" className="text-blue-600 hover:underline">info@kourilovitch.com</a></p>
-          <p className="text-sm text-gray-600">Teléfono: +593 123 456 789</p>
+          <p className="text-sm ">Correo: <a href="mailto:info@kourilovitch.com" className="text-blue-600 hover:underline">info@kourilovitch.com</a></p>
+          <p className="text-sm">Teléfono: +593 123 456 789</p>
         </div>
         <div>
           <h4 className="text-lg font-semibold mb-4">Números de Teléfono</h4>
-          <p className="text-sm text-gray-600">Principal: +593 987 654 321</p>
-          <p className="text-sm text-gray-600">Secundario: +593 123 456 789</p>
+          <p className="text-sm ">Principal: +593 987 654 321</p>
+          <p className="text-sm ">Secundario: +593 123 456 789</p>
           <h4 className="text-lg font-semibold mt-4">Dirección</h4>
-          <p className="text-sm text-gray-600">Av. Principal y Calle Secundaria, Cuenca, Ecuador</p>
+          <p className="text-sm ">Av. Principal y Calle Secundaria, Cuenca, Ecuador</p>
         </div>
         <div>
           <h4 className="text-lg font-semibold mb-4">Mapa</h4>
@@ -100,7 +100,7 @@ const Footer = () => {
         <Link href="#" className="w-10 h-10 flex justify-center items-center bg-gray-200 rounded-full text-gray-600 hover:bg-gray-300">I</Link>
         <Link href="#" className="w-10 h-10 flex justify-center items-center bg-gray-200 rounded-full text-gray-600 hover:bg-gray-300">L</Link>
       </div>
-      <div className="text-center text-sm text-gray-500 mt-4">
+      <div className="text-center text-sm mt-4">
         &copy; 2024 Kourilovitch - Todos los Derechos Reservados
       </div>
     </footer>

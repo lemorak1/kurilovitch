@@ -9,6 +9,7 @@ interface MissionVisionProps {
   visionTitle: string; // Título de la sección de Visión
   visionText: string; // Contenido de la Visión
   backgroundColor?: string; // Color de fondo
+  backgroundColor2?:string;
   textColor?: string; // Color del texto
 }
 
@@ -19,6 +20,7 @@ const MissionVision: React.FC<MissionVisionProps> = ({
   visionTitle = "Visión",
   visionText,
   backgroundColor = "#f9f9f9", // Fondo claro por defecto
+  backgroundColor2 = "#ffffff", // Fondo claro por defecto
   textColor = "#333333", // Texto oscuro por defecto
 }) => {
   return (
@@ -32,15 +34,19 @@ const MissionVision: React.FC<MissionVisionProps> = ({
       {/* Contenedor de Tarjetas */}
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl">
         {/* Tarjeta Misión */}
-        <div className="flex-1 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all">
-          <h3 className="text-2xl font-semibold text-blue-500 mb-4">{missionTitle}</h3>
-          <p className="text-gray-700 text-base leading-relaxed">{missionText}</p>
+        <div className="flex-1 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all" 
+        style={{ backgroundColor: backgroundColor2, color: textColor }}
+        >
+          <h3 className="text-2xl font-semibold mb-4">{missionTitle}</h3>
+          <p className=" text-base leading-relaxed">{missionText}</p>
         </div>
 
         {/* Tarjeta Visión */}
-        <div className="flex-1 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all">
-          <h3 className="text-2xl font-semibold text-blue-500 mb-4">{visionTitle}</h3>
-          <p className="text-gray-700 text-base leading-relaxed">{visionText}</p>
+        <div className="flex-1 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all"
+        style={{ backgroundColor: backgroundColor2, color: textColor }}
+        >
+          <h3 className="text-2xl font-semibold  mb-4">{visionTitle}</h3>
+          <p className=" text-base leading-relaxed">{visionText}</p>
         </div>
       </div>
     </section>

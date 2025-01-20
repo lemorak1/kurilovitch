@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { useHeaderColorContext } from "../../context/HeaderColorContext";
-// import ImagenVideo from "../components/ImagenVideo";
+import ImagenVideo from "../components/ImagenVideo";
 // import MisionVision from "../components/MisionVision";
 import TextoImagen from "../components/textoImagen";
 import HeroSection from "../components/HeroSection";
@@ -55,35 +55,39 @@ const objectivesData = [
 const AboutPage = () => {
     ;
     const { setHeaderColors } = useHeaderColorContext();
+
 let bg_color="#64aaf1"
+let bg_color2="#304d6d"
+let font_color="#ffffff"
     useEffect(() => {
-        // setHeaderColors({
-        //   backgroundColor: "#000000", // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
-        // });
+        setHeaderColors({
+          backgroundColor: bg_color,
+          fontColor: font_color, // Solo establecemos el fondo aquí, se mantendrá el color de fuente predeterminado
+        });
 
         return () => {
             setHeaderColors({
                 backgroundColor: bg_color,
-                fontColor: "#000000",
+                fontColor: font_color,
             });
         };
     }, [setHeaderColors]);
 
     return (
         <div>
-            {/* <ImagenVideo
+            <ImagenVideo
                 backgroundUrl="/videos/intro.mp4"
                 isVideo={true}
                 text="Conoce un poco de KURILOVITCH"
                 // buttonLabel="Descubre más"
                 // buttonLink="#"
-            /> */}
+            />
 
   {/* Intro Section */}
 
-      <HeroSection
+      {/* <HeroSection
     videoUrl="imagenes/Home/videoBienvenida.mp4"
-    />
+    /> */}
       <TextoImagen
         titulo=""
         parrafos={[
@@ -94,7 +98,7 @@ let bg_color="#64aaf1"
         imagen="/imagenes/About/Introduction_About.webp"
         posicion="left"
         backgroundColor={bg_color} // Color de fondo personalizado
-        fontColor="#01579b" // Color de texto personalizado
+        fontColor={font_color}  // Color de texto personalizado
       />
 
 
@@ -104,14 +108,16 @@ let bg_color="#64aaf1"
       visionTitle="Vision"
       missionText="En Kourilovitch Institute, nuestra misión es fomentar el aprendizaje de idiomas de manera integral y accesible, promoviendo la comprensión intercultural y la excelencia académica. Nos dedicamos a formar estudiantes en competencias lingüísticas que van más allá del idioma, integrando la cultura y las particularidades de cada lengua. Buscamos crear una comunidad de aprendizaje inclusiva y colaborativa, donde cada estudiante se sienta inspirado a expandir sus horizontes y alcanzar sus metas personales y profesionales."
       visionText="Nuestra visión es ser un referente en la enseñanza de idiomas en Latinoamérica, destacándonos por nuestra calidad educativa, metodología innovadora y compromiso con la diversidad cultural. Aspiramos a ser el lugar de elección para quienes desean aprender un idioma con el respaldo de un equipo académico de excelencia, con profesores especializados y programas personalizados que impulsen el desarrollo global y el intercambio cultural."
-      backgroundColor="#f0f4f8" // Fondo suave
-      textColor="#333333" // Texto oscuro
+      backgroundColor={bg_color} // Fondo suave
+      backgroundColor2={bg_color2} // Fondo suave
+      textColor={font_color}  // Texto oscuro
     />
       <ObjetivoSection
         title="Nuestros Objetivos"
         objectives={objectivesData}
-        backgroundColor="#ffffff"
-        fontColor="#333333"
+        backgroundColor={bg_color} // Fondo suave
+        backgroundColor2={bg_color2} // Fondo suave
+        fontColor={font_color}  // Texto oscuro
       />
 
             {/* <MisionVision
