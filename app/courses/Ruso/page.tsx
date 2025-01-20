@@ -18,8 +18,8 @@ const SliderLevels = dynamic(() => import("../../components/SliderLevels"), {
 
 const CursoRuso = () => {
   const { setHeaderColors } = useHeaderColorContext();
-  const bg_color = "#ffb100";
-  const font_color = "#c73e1d";
+  const bg_color = "#304d6d";
+  const font_color = "#ffffff";
 
   useEffect(() => {
     setHeaderColors({ backgroundColor: bg_color, fontColor: font_color });
@@ -74,6 +74,10 @@ const CursoRuso = () => {
     }
 ];
 
+
+
+
+
   return (
     <>
       <Head>
@@ -93,7 +97,12 @@ const CursoRuso = () => {
             priority
             style={{ objectFit: "cover" }}
           />
-         
+          <div className="relative z-10 text-center max-w-2xl">
+            {/* <h1 className="text-4xl md:text-6xl font-bold">Domina el Ruso con Kourilovitch Institute</h1>
+            <p className="mt-4 text-lg md:text-xl font-semibold">
+              Aprende ruso con un método innovador y profesores nativos.
+            </p> */}
+          </div>
         </section>
 
         <SliderLevels

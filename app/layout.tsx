@@ -24,10 +24,10 @@ export default function RootLayout({
           </header>
           <main>{children}</main>{" "}
           {/* Aquí se renderiza el contenido de cada página */}
-        </HeaderColorProvider>
         <footer id="footer">{/* Aquí va el pie de página */}
         <Footer />
         </footer>
+        </HeaderColorProvider>
       </body>
     </html>
   );

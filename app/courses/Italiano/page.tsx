@@ -18,8 +18,8 @@ const SliderLevels = dynamic(() => import("../../components/SliderLevels"), {
 
 const CursoItaliano = () => {
   const { setHeaderColors } = useHeaderColorContext();
-  const bg_color = "#ffb100";
-  const font_color = "#c73e1d";
+  const bg_color = "#17c3b2";
+  const font_color = "#ffffff";
 
   useEffect(() => {
     setHeaderColors({ backgroundColor: bg_color, fontColor: font_color });
@@ -74,6 +74,7 @@ const CursoItaliano = () => {
 ];
 
 
+
   return (
     <>
       <Head>
@@ -81,19 +82,18 @@ const CursoItaliano = () => {
         <meta name="description" content="Domina el italiano con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
         <meta property="og:title" content="Curso Intensivo de Italiano - Kourilovitch Institute" />
         <meta property="og:description" content="Domina el italiano con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
-        <meta property="og:image" content="/imagenes/Courses/Italiano/P_Principal_Italiano .jpg" />
+        <meta property="og:image" content="/imagenes/Courses/Italiano/P_CompletoItaliano.jpg" />
       </Head>
       <div>
         <section className="relative h-screen flex items-center justify-center text-white">
           <Image
-            src="/imagenes/Courses/Italiano/P_Principal_Italiano .jpg"
+            src="/imagenes/Courses/Italiano/P_Principal_Italiano.jpg"
             alt="Curso Intensivo de Italiano"
             fill
             quality={75}
             priority
             style={{ objectFit: "cover" }}
           />
-        
         </section>
 
         <SliderLevels
