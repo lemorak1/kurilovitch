@@ -323,6 +323,36 @@ const CursoAleman = () => {
             "Clases prácticas con retroalimentación constante.",
             "Modalidad presencial y online."
         ]
+    },
+    {
+        level: "Curso Intensivo de Alemán Nivel A1 para Niños",
+        description: "¡El inicio perfecto para aprender alemán de una manera divertida y efectiva! Diseñado para niños de 10 a 14 años, este curso combina juegos, actividades interactivas y un enfoque personalizado.",
+        image: "/imagenes/Courses/Aleman/P_NiñosA1.jpg",
+        links: [{ text: "Más información", href: "#curso-a1-aleman-ninos" }],
+        cost: "$500",
+        duration: "7 semanas",
+        requirements: "Edad entre 10 y 14 años.",
+        benefits: [
+            "Grupos reducidos con máximo 3 estudiantes.",
+            "Clases dinámicas con actividades lúdicas.",
+            "Horarios flexibles con modalidad presencial y online.",
+            "Atención personalizada para cada estudiante."
+        ]
+    },
+    {
+        level: "Curso Intensivo de Alemán Nivel A2 para Niños",
+        description: "Un curso diseñado para jóvenes estudiantes que desean profundizar en sus habilidades lingüísticas. Perfecto para consolidar conocimientos y avanzar con confianza.",
+        image: "/imagenes/Courses/Aleman/P_NiñosA2.jpg",
+        links: [{ text: "Más información", href: "#curso-a2-aleman-ninos" }],
+        cost: "$680",
+        duration: "8 semanas",
+        requirements: "Nivel A1 aprobado y edad entre 10 y 14 años.",
+        benefits: [
+            "Enfoque en conversación y gramática práctica.",
+            "Actividades diseñadas para niños con intereses variados.",
+            "Atención personalizada con un máximo de 3 estudiantes por grupo.",
+            "Modalidad presencial y online adaptada a niños."
+        ]
     }
 ];
 

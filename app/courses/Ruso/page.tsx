@@ -25,55 +25,105 @@ const CursoRuso = () => {
     setHeaderColors({ backgroundColor: bg_color, fontColor: font_color });
   }, [setHeaderColors]);
 
-  const levels = [
-    {
-        level: "Curso de Ruso Nivel A1",
-        description: "Curso de introducción al ruso, diseñado para principiantes con un enfoque estructurado y efectivo.",
-        image: "/imagenes/Courses/Ruso/P_A1_Ruso.jpg",
-        links: [{ text: "Más información", href: "#curso-a1-ruso" }],
-        cost: "$720",
-        duration: "3 meses",
-        requirements: "Edad mínima de 14 años.",
-        benefits: [
-            "Clases 100% online y en vivo.",
-            "Grupos reducidos con un máximo de 5 estudiantes.",
-            "Metodología estructurada y efectiva, diseñada por la Prof. Irena Zhaboklitskaya.",
-            "Material digital interactivo y ejercicios prácticos.",
-            "Preparación para situaciones básicas y cotidianas en ruso."
-        ]
-    },
-    {
-        level: "Curso de Ruso Nivel A2",
-        description: "Curso diseñado para quienes ya tienen una base en ruso y desean ampliar su vocabulario y comprensión.",
-        image: "/imagenes/Courses/Ruso/P_A2_Ruso.jpg",
-        links: [{ text: "Más información", href: "#curso-a2-ruso" }],
-        cost: "$720",
-        duration: "3 meses",
-        requirements: "Nivel A1 aprobado.",
-        benefits: [
-            "Expansión de vocabulario y gramática básica.",
-            "Enseñanza con un máximo de 5 estudiantes para mayor atención.",
-            "Material interactivo y recursos didácticos digitales.",
-            "Enfoque comunicativo para mejorar la conversación cotidiana."
-        ]
-    },
-    {
-        level: "Curso de Ruso Nivel B1 (Privado)",
-        description: "Curso intermedio-avanzado con atención 100% personalizada, ideal para perfeccionar la fluidez y comprensión.",
-        image: "/imagenes/Courses/Ruso/P_B1_Ruso.jpg",
-        links: [{ text: "Más información", href: "#curso-b1-ruso" }],
-        cost: "$1300",
-        duration: "30 horas",
-        requirements: "Nivel A1 y A2 aprobados.",
-        benefits: [
-            "Clases privadas para un progreso personalizado.",
-            "Enfoque en habilidades de comprensión oral y escrita avanzadas.",
-            "Simulacros y práctica de conversaciones complejas.",
-            "Material exclusivo diseñado por la Prof. Irena Zhaboklitskaya."
-        ]
-    }
-];
+//   const levels = [
+//     {
+//         level: "Curso de Ruso Nivel A1",
+//         description: "Curso de introducción al ruso, diseñado para principiantes con un enfoque estructurado y efectivo.",
+//         image: "/imagenes/Courses/Ruso/P_A1_Ruso.jpg",
+//         links: [{ text: "Más información", href: "#curso-a1-ruso" }],
+//         cost: "$720",
+//         duration: "3 meses",
+//         requirements: "Edad mínima de 14 años.",
+//         benefits: [
+//             "Clases 100% online y en vivo.",
+//             "Grupos reducidos con un máximo de 5 estudiantes.",
+//             "Metodología estructurada y efectiva, diseñada por la Prof. Irena Zhaboklitskaya.",
+//             "Material digital interactivo y ejercicios prácticos.",
+//             "Preparación para situaciones básicas y cotidianas en ruso."
+//         ]
+//     },
+//     {
+//         level: "Curso de Ruso Nivel A2",
+//         description: "Curso diseñado para quienes ya tienen una base en ruso y desean ampliar su vocabulario y comprensión.",
+//         image: "/imagenes/Courses/Ruso/P_A2_Ruso.jpg",
+//         links: [{ text: "Más información", href: "#curso-a2-ruso" }],
+//         cost: "$720",
+//         duration: "3 meses",
+//         requirements: "Nivel A1 aprobado.",
+//         benefits: [
+//             "Expansión de vocabulario y gramática básica.",
+//             "Enseñanza con un máximo de 5 estudiantes para mayor atención.",
+//             "Material interactivo y recursos didácticos digitales.",
+//             "Enfoque comunicativo para mejorar la conversación cotidiana."
+//         ]
+//     },
+//     {
+//         level: "Curso de Ruso Nivel B1 (Privado)",
+//         description: "Curso intermedio-avanzado con atención 100% personalizada, ideal para perfeccionar la fluidez y comprensión.",
+//         image: "/imagenes/Courses/Ruso/P_B1_Ruso.jpg",
+//         links: [{ text: "Más información", href: "#curso-b1-ruso" }],
+//         cost: "$1300",
+//         duration: "30 horas",
+//         requirements: "Nivel A1 y A2 aprobados.",
+//         benefits: [
+//             "Clases privadas para un progreso personalizado.",
+//             "Enfoque en habilidades de comprensión oral y escrita avanzadas.",
+//             "Simulacros y práctica de conversaciones complejas.",
+//             "Material exclusivo diseñado por la Prof. Irena Zhaboklitskaya."
+//         ]
+//     }
+// ];
 
+const levels=[
+  {
+      level: "Curso de Ruso Nivel A1",
+      description: "Curso diseñado por la reconocida Prof. Irena Zhaboklitskaya, ideal para principiantes que buscan una base sólida en ruso con un enfoque estructurado y efectivo.",
+      image: "/imagenes/Courses/Ruso/P_A1_Ruso.jpg",
+      links: [{ text: "Más información", href: "#curso-a1-ruso" }],
+      cost: "$720",
+      duration: "3 meses",
+      requirements: "Edad mínima de 14 años.",
+      benefits: [
+          "Clases 100% online y en vivo.",
+          "Grupos reducidos con un máximo de 5 estudiantes.",
+          "Metodología estructurada y efectiva, diseñada por la Prof. Irena Zhaboklitskaya.",
+          "Material digital interactivo y ejercicios prácticos.",
+          "Preparación para situaciones básicas y cotidianas en ruso."
+      ]
+  },
+  {
+      level: "Curso de Ruso Nivel A2",
+      description: "Curso diseñado para quienes ya tienen una base en ruso y desean ampliar su vocabulario y comprensión, guiados por la experiencia de la Prof. Irena Zhaboklitskaya.",
+      image: "/imagenes/Courses/Ruso/P_A2_Ruso.jpg",
+      links: [{ text: "Más información", href: "#curso-a2-ruso" }],
+      cost: "$720",
+      duration: "3 meses",
+      requirements: "Nivel A1 aprobado.",
+      benefits: [
+          "Expansión de vocabulario y gramática básica.",
+          "Enseñanza con un máximo de 5 estudiantes para mayor atención.",
+          "Material interactivo y recursos didácticos digitales.",
+          "Enfoque comunicativo para mejorar la conversación cotidiana.",
+          "Metodología respaldada por la Prof. Irena Zhaboklitskaya."
+      ]
+  },
+  {
+      level: "Curso de Ruso Nivel B1 (Privado)",
+      description: "Curso avanzado guiado por la prestigiosa Prof. Irena Zhaboklitskaya, diseñado para perfeccionar tus habilidades de comprensión y fluidez.",
+      image: "/imagenes/Courses/Ruso/P_B1_Ruso.jpg",
+      links: [{ text: "Más información", href: "#curso-b1-ruso" }],
+      cost: "$1300",
+      duration: "30 horas",
+      requirements: "Nivel A1 y A2 aprobados.",
+      benefits: [
+          "Clases privadas para un progreso personalizado.",
+          "Enfoque en habilidades de comprensión oral y escrita avanzadas.",
+          "Simulacros y práctica de conversaciones complejas.",
+          "Material exclusivo diseñado por la Prof. Irena Zhaboklitskaya.",
+          "Enseñanza respaldada por más de 30 años de experiencia de la profesora."
+      ]
+  }
+];
 
 
 
