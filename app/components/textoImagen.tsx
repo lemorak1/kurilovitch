@@ -205,5 +205,4 @@ const TextoConImagen: React.FC<TextoConImagenProps> = ({
     </section>
   );
 };
-
 export default TextoConImagen;
