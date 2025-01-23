@@ -7,6 +7,7 @@ import ImagenVideo from "../components/ImagenVideo";
 import TextoImagen from "../components/textoImagen";
 import HeroSection from "../components/HeroSection";
 
+
 import MisionVisionSection from "../components/MisionVisionSection";
 import ObjetivoSection from "../components/ObjetivoSection";
 const data = {
