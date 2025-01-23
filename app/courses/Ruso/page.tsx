@@ -211,6 +211,7 @@ const CursoRuso = () => {
           botonLink={profesoraDataRuso.botonLink}
           mostrarBordes={profesoraDataRuso.mostrarBordes}
         />
+        
         <FormularioAgendarClase
           colorFondo={bg_color}
           curso="Agenda una clase gratuita en nuestro Curso Intensivo de Ruso"
