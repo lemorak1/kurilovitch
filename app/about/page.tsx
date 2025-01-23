@@ -82,6 +82,7 @@ const AboutPage = () => {
 let bg_color="#64aaf1"
 let bg_color2="#304d6d"
 let font_color="#ffffff"
+
     useEffect(() => {
         setHeaderColors({
           backgroundColor: bg_color,
