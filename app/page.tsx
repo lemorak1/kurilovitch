@@ -178,6 +178,8 @@
 "use client";
 import React, { useEffect } from "react";
 import HeroSection from "../app/components/HeroSection";
+import TextoImagen from "../app/components/textoImagen";
+
 import FAQSection from "../app/components/FAQSection";
 import Beneficios from "../app/components/Beneficios";
 import BestCourses from "../app/components/BestCourses";
@@ -297,7 +299,28 @@ const Home = () => {
         "Utilizamos herramientas digitales avanzadas y plataformas interactivas que hacen el aprendizaje más dinámico y efectivo.",
     },
   ];
-  
+  const profesoraData = {
+    titulo: "Conoce a la Profesora Irena Zhaboklitskaya",
+    parrafos: [
+      { texto: "Más de 30 años de experiencia enseñando ruso a estudiantes de todo el mundo." },
+      { texto: "Especialista certificada en exámenes TORFL, con una metodología efectiva y práctica." },
+      { texto: "Lidera los programas de ruso en Kourilovitch Institute, combinando pasión y excelencia." },
+    ],
+    logros: [
+      "30+ años de experiencia.",
+      "Certificada en TORFL.",
+      "Más de 500 estudiantes exitosos.",
+      "Metodología exclusiva y probada.",
+    ],
+    imagen: "/imagenes/profesora.jpg",
+    backgroundColor: bg_color,
+    fontColor: font_color,
+    botonTexto: "Leer más",
+    botonLink: "/about",
+    mostrarBordes: true,
+    mostrarBoton: true,
+    backgroundColorSecond:backgroundColorSecond,
+  };
   return (
     <>
       {/* Hero Section */}
@@ -312,7 +335,20 @@ const Home = () => {
       >
      <Beneficios sections={sectionsData}  backgroundColor={bg_color} textColor={font_color} backgroundColorSecond={backgroundColorSecond}/>;
       </section>
-
+ {/* Profesora Irena */}
+ <TextoImagen
+        titulo={profesoraData.titulo}
+        parrafos={profesoraData.parrafos}
+        logros={profesoraData.logros}
+        imagen={profesoraData.imagen}
+        backgroundColor={profesoraData.backgroundColor}
+        fontColor={profesoraData.fontColor}
+        botonTexto={profesoraData.botonTexto}
+        botonLink={profesoraData.botonLink}
+        mostrarBordes={profesoraData.mostrarBordes}
+        mostrarBoton={profesoraData.mostrarBoton}
+        backgroundColorSecond={profesoraData.backgroundColorSecond}
+      />
       {/* Cursos Destacados */}
       <section id="courses-section" className="text-gray-800" 
       style={{

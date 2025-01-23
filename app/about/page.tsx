@@ -52,6 +52,28 @@ const objectivesData = [
       icon: "/imagenes/About/objetivo_4.webp",
     },
   ];
+  {/* Sección de la Profesora */}
+  const profesoraDataAbout = {
+    titulo: "Conoce a la Profesora Irena Zhaboklitskaya",
+    parrafos: [
+      { texto: "Con más de 30 años de experiencia, la profesora Irena Zhaboklitskaya es una pieza clave en el Kourilovitch Institute." },
+      { texto: "Su compromiso con la enseñanza y su metodología única la han convertido en una referencia en el aprendizaje del idioma ruso." },
+      { texto: "Además, su experiencia incluye la preparación de estudiantes para certificaciones internacionales como TORFL." },
+    ],
+    logros: [
+      "30+ años de experiencia en enseñanza de ruso.",
+      "Especialista en certificaciones oficiales como TORFL.",
+      "Creadora de una metodología de inmersión cultural.",
+    ],
+    imagen: "/imagenes/profesora_about.jpg",
+    backgroundColor: "#f3f4f6",
+    fontColor: "#333333",
+    botonTexto: "Descubre más",
+    botonLink: "/courses/ruso",
+    mostrarBordes: true,
+  };
+  
+
 const AboutPage = () => {
     ;
     const { setHeaderColors } = useHeaderColorContext();
@@ -119,6 +141,17 @@ let font_color="#ffffff"
         backgroundColor2={bg_color2} // Fondo suave
         fontColor={font_color}  // Texto oscuro
       />
+      <TextoImagen
+  titulo={profesoraDataAbout.titulo}
+  parrafos={profesoraDataAbout.parrafos}
+  logros={profesoraDataAbout.logros}
+  imagen={profesoraDataAbout.imagen}
+  backgroundColor={profesoraDataAbout.backgroundColor}
+  fontColor={profesoraDataAbout.fontColor}
+  botonTexto={profesoraDataAbout.botonTexto}
+  botonLink={profesoraDataAbout.botonLink}
+  mostrarBordes={profesoraDataAbout.mostrarBordes}
+/>
 
             {/* <MisionVision
                 topTitle={data.topTitle}
