@@ -335,6 +335,7 @@ const Home = () => {
       >
      <Beneficios sections={sectionsData}  backgroundColor={bg_color} textColor={font_color} backgroundColorSecond={backgroundColorSecond}/>;
       </section>
+      
  {/* Profesora Irena */}
  <TextoImagen
         titulo={profesoraData.titulo}
@@ -362,6 +363,7 @@ const Home = () => {
           curso="Agenda una clase gratuita en Curso de Alemán"
         />
          
+
          <InstagramFeed accessToken="TU_TOKEN_DE_ACCESO_AQUÍ" />
 
       {/* FAQ Section */}
