@@ -207,6 +207,17 @@ const Home = () => {
       });
     };
   }, [setHeaderColors]);
+  useEffect(() => {
+    // Detecta si hay un hash en la URL
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        // Desplázate suavemente al elemento con el id
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []); // Solo se ejecuta al cargar la página
   const faqs = [
     {
       question: "¿Qué modalidades de estudio ofrecen?",
@@ -303,20 +314,22 @@ const Home = () => {
     titulo: "Conoce a la Profesora Irena Zhaboklitskaya",
     parrafos: [
       { texto: "Más de 30 años de experiencia enseñando ruso a estudiantes de todo el mundo." },
-      { texto: "Especialista certificada en exámenes TORFL, con una metodología efectiva y práctica." },
+      { texto: "Especialista certificada en exámenes TRKI, con una metodología efectiva y práctica." },
       { texto: "Lidera los programas de ruso en Kourilovitch Institute, combinando pasión y excelencia." },
     ],
     logros: [
-      "30+ años de experiencia.",
-      "Certificada en TORFL.",
-      "Más de 500 estudiantes exitosos.",
-      "Metodología exclusiva y probada.",
+      "✨ 30+ años de experiencia enseñando ruso como lengua extranjera.",
+      "🏛️ Catedrática en el Departamento de Ruso como Lengua Extranjera de la Universidad Estatal de Moscú.",
+      "📘 Autora de cinco cursos fundamentales de enseñanza del ruso.",
+      "✅ Especialista en preparación para exámenes oficiales como el TRKI.",
+      "🌍 Ponente en conferencias internacionales sobre innovación en enseñanza de idiomas.",
     ],
-    imagen: "/imagenes/profesora.jpg",
+  
+    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
     backgroundColor: bg_color,
     fontColor: font_color,
     botonTexto: "Leer más",
-    botonLink: "/about",
+    botonLink: "/about#Profesora-Irena",
     mostrarBordes: true,
     mostrarBoton: true,
     backgroundColorSecond:backgroundColorSecond,

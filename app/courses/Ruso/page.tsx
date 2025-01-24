@@ -126,6 +126,7 @@ const CursoRuso = () => {
   ];
 
   const profesoraDataRuso = {
+    id: "#Profesora-Irena",
     titulo: "Nuestra Instructora Principal",
     parrafos: [
       { texto: "La Prof. Irena Zhaboklitskaya lidera el programa de ruso, con un enfoque único que combina experiencia y pasión por la enseñanza." },
@@ -133,12 +134,14 @@ const CursoRuso = () => {
       { texto: "Bajo su guía, cientos de estudiantes han alcanzado certificaciones oficiales y dominado el idioma ruso." },
     ],
     logros: [
-      "Certificada en TORFL.",
-      "30+ años de experiencia enseñando ruso.",
-      "Preparación personalizada para exámenes oficiales.",
-      "Metodología exclusiva y probada.",
+      "✨ 30+ años de experiencia enseñando ruso como lengua extranjera.",
+      "🏛️ Catedrática en el Departamento de Ruso como Lengua Extranjera de la Universidad Estatal de Moscú.",
+      "📘 Autora de cinco cursos fundamentales de enseñanza del ruso.",
+      "✅ Especialista en preparación para exámenes oficiales como el TRKI.",
+      "🌍 Ponente en conferencias internacionales sobre innovación en enseñanza de idiomas.",
     ],
-    imagen: "/imagenes/profesora_ruso.jpg",
+  
+    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
     backgroundColor: "#304d6d",
     fontColor: "#ffffff",
     botonTexto: "Ver más detalles",
@@ -201,6 +204,8 @@ const CursoRuso = () => {
         ))}
         {/* Sección de la Profesora */}
         <TextoImagen
+        key="100"
+         id={profesoraDataRuso.id.substring(1)}
           titulo={profesoraDataRuso.titulo}
           parrafos={profesoraDataRuso.parrafos}
           logros={profesoraDataRuso.logros}
@@ -211,7 +216,7 @@ const CursoRuso = () => {
           botonLink={profesoraDataRuso.botonLink}
           mostrarBordes={profesoraDataRuso.mostrarBordes}
         />
-        
+
         <FormularioAgendarClase
           colorFondo={bg_color}
           curso="Agenda una clase gratuita en nuestro Curso Intensivo de Ruso"
