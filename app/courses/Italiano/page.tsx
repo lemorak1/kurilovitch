@@ -88,7 +88,9 @@ const CursoItaliano = () => {
         <section className="relative h-screen flex items-center justify-center text-white">
           <Image
             src="/imagenes/Courses/Italiano/P_Principal_Italiano.jpg"
+
             alt="Curso Intensivo de Italiano"
+            
             fill
             quality={75}
             priority
