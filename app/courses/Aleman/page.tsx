@@ -235,6 +235,21 @@ const CursoAleman = () => {
         ]
     },
     {
+      level: "Curso Privado de Alemán",
+      description: "Clases privadas diseñadas para adaptarse a las necesidades específicas de cada estudiante.",
+      image: "/imagenes/Courses/Aleman/P_PrivadosAleman.jpg",
+      links: [{ text: "Más información", href: "#curso-privado-aleman" }],
+      cost: "$30/hora",
+      duration: "Flexible según necesidades del estudiante.",
+      requirements: "Ninguno.",
+      benefits: [
+        "Clases totalmente personalizadas.",
+        "Horarios flexibles y adaptados al estudiante.",
+        "Ideal para objetivos específicos como negocios o exámenes.",
+        "Modalidad online y presencial."
+      ]
+    },
+    {
         level: "Curso Intensivo de Alemán Nivel A1",
         description: "Curso de introducción al alemán, ideal para principiantes, con un enfoque comunicativo y prácticas desde la primera clase.",
         image: "/imagenes/Courses/Aleman/P_A1_Aleman.jpg",
@@ -308,6 +323,21 @@ const CursoAleman = () => {
             "Material especializado y clases con nativos.",
             "Horarios flexibles con modalidad online y presencial."
         ]
+    },
+    {
+      level: "Curso Conversacional de Alemán",
+      description: "Curso intensivo enfocado en mejorar la fluidez y comprensión auditiva a través de simulaciones y conversaciones reales.",
+      image: "/imagenes/Courses/Aleman/P_ConversacionAleman.jpg",
+      links: [{ text: "Más información", href: "#curso-conversacion-aleman" }],
+      cost: "$600",
+      duration: "8 semanas",
+      requirements: "Nivel A2 aprobado.",
+      benefits: [
+        "Prácticas conversacionales intensivas.",
+        "Simulaciones de escenarios cotidianos y profesionales.",
+        "Grupos pequeños para mayor interacción.",
+        "Modalidad online y presencial."
+      ]
     },
     {
         level: "Curso Intensivo de Preparación para el Examen Goethe",
