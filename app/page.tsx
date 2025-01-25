@@ -179,7 +179,7 @@
 import React, { useEffect } from "react";
 import HeroSection from "../app/components/HeroSection";
 import TextoImagen from "../app/components/textoImagen";
-
+import { useRouter } from "next/navigation";
 import FAQSection from "../app/components/FAQSection";
 import Beneficios from "../app/components/Beneficios";
 import BestCourses from "../app/components/BestCourses";
@@ -189,6 +189,7 @@ import InstagramFeed from "./components/InstagramFeed";
 
 
 const Home = () => {
+  const router = useRouter();
     const { setHeaderColors } = useHeaderColorContext();
   let bg_color="#64aaf1";
   let font_color="#ffffff";
@@ -251,28 +252,28 @@ const Home = () => {
       description:
         "Domina el alemán con clases intensivas diseñadas para alcanzar fluidez rápidamente y obtén la preparación necesaria para exámenes Goethe. Descubre la riqueza cultural alemana mientras mejoras tu perfil académico o profesional.",
       buttonLabel: "Ver más",
-      onButtonClick: () => alert("Curso de Alemán"),
+      onButtonClick: () => router.push("/courses/Aleman"),
     },
     {
       title: "Español",
       description:
         "Aprende español desde la comodidad de tu hogar con profesores nativos. Perfecto para viajeros, profesionales y estudiantes que desean dominar uno de los idiomas más hablados del mundo.",
       buttonLabel: "Ver más",
-      onButtonClick: () => alert("Curso de Español"),
+      onButtonClick: () => router.push("/courses/Espanol"),
     },
     {
       title: "Italiano",
       description:
         "Sumérgete en la cultura italiana mientras aprendes el idioma con un enfoque práctico. Ideal para amantes del arte, la gastronomía y la música.",
       buttonLabel: "Ver más",
-      onButtonClick: () => alert("Curso de Italiano"),
+      onButtonClick: () => router.push("/courses/Italiano"),
     },
     {
       title: "Ruso",
       description:
         "Aprende ruso con una metodología práctica que te prepara para explorar una de las culturas más fascinantes del mundo. Ideal para negocios, estudios o viajes.",
       buttonLabel: "Ver más",
-      onButtonClick: () => alert("Curso de Ruso"),
+      onButtonClick: () => router.push("/courses/Ruso"),
     },
   
   ];
