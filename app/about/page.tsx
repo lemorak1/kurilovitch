@@ -82,30 +82,38 @@ const AboutPage = () => {
     id: "Profesora-Irena",
     titulo: "Conoce a la Profesora Irena Zhaboklitskaya",
     parrafos: [
-      { texto: "🌟 La Prof. Irena Zhaboklitskaya, catedrática de la Universidad Estatal de Moscú, es una experta reconocida internacionalmente en la enseñanza del idioma ruso como lengua extranjera." },
-      { texto: "📚 Con más de 30 años de experiencia, ha formado a cientos de estudiantes de todo el mundo, desde niveles básicos hasta avanzados." },
-      { texto: "✍️ Es autora de cinco cursos fundamentales sobre el ruso como lengua extranjera, utilizados en la prestigiosa Universidad Estatal de Moscú." },
-      { texto: "🎓 Su metodología única combina claridad, estructura y eficacia, ayudando a los estudiantes a dominar el idioma ruso y prepararse para exámenes oficiales como el TRKI." },
-      { texto: "🔍 Ha contribuido al desarrollo de recursos educativos innovadores, incluyendo estudios sobre orientación cultural, enseñanza en entornos online y uso de tareas lúdicas en el aula." },
-      { texto: "🌐 Además, ha participado como ponente en conferencias internacionales, destacando el ruso como un medio esencial para la comunicación intercultural." },
+        { texto: "La Prof. Irena Zhaboklitskaya (𝐊𝐨𝐮𝐫𝐢𝐥𝐨𝐯𝐢𝐭𝐜𝐡), es una Catedrática de la Facultad de Idioma Ruso, Departamento \u201c𝐈𝐝𝐢𝐨𝐦𝐚 𝐑𝐮𝐬𝐨 𝐜𝐨𝐦𝐨 𝐋𝐞𝐧𝐠𝐮𝐚 𝐄𝐱𝐭𝐫𝐚𝐧𝐣𝐞𝐫𝐚\u201d, en la prestigiosa Universidad Estatal de Mosc\u00fa." },
+        { texto: "Con una carrera que abarca m\u00e1s de 30 a\u00f1os de experiencia, la profesora Zhaboklitskaya es una experta reconocida a nivel internacional en la ense\u00f1anza del ruso como lengua extranjera.\ud83c\udf93" },
+        { texto: "\ud83d\udcda 𝐒𝐮 𝐭𝐫𝐚𝐲𝐞𝐜𝐭𝐨𝐫𝐢𝐚 𝐚𝐜𝐚𝐝𝐞\u0301𝐦𝐢𝐜𝐚 𝐲 𝐩𝐫𝐨𝐟𝐞𝐬𝐢𝐨𝐧𝐚𝐥 𝐢𝐧𝐜𝐥𝐮𝐲𝐞:" },
+        { texto: "Amplia experiencia docente: Ha ense\u00f1ado ruso a estudiantes de todo el mundo, ayudando a cientos de personas a dominar este idioma gracias a su 𝐦𝐞𝐭𝐨𝐝𝐨𝐥𝐨𝐠\u0301𝐢𝐚 𝐜𝐥𝐚𝐫𝐚, 𝐞𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐚𝐝𝐚 𝐲 𝐞𝐟𝐢𝐜𝐚𝐳." },
+        { texto: "Prof. Zhaboklitskaya ha formado a estudiantes en todos los niveles, desde principiantes hasta avanzados, adapt\u00e1ndose siempre a las necesidades de sus alumnos.\ud83d\udc69\ud83c\udfeb" },
+        { texto: "La profesora Zhaboklitskaya tiene una notable trayectoria en la ense\u00f1anza del idioma ruso, con una experiencia que abarca desde los niveles b\u00e1sicos hasta la preparaci\u00f3n para ex\u00e1menes oficiales como el TRKI." },
+        { texto: "Su dedicaci\u00f3n a la ense\u00f1anza de lengua rusa se refleja en la creaci\u00f3n de 𝐜𝐢𝐧𝐜𝐨 𝐜𝐮𝐫𝐬𝐨𝐬 𝐟𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐞𝐬, incluyendo dos cursos de \u201c𝐑𝐮𝐬𝐨 𝐜𝐨𝐦𝐨 𝐥𝐞𝐧𝐠𝐮𝐚 𝐞𝐱𝐭𝐫𝐚\u00f1𝐞𝐫𝐚\u201d desarrollados en colaboraci\u00f3n con otros expertos, as\u00ed como \u201c𝐋𝐞𝐧𝐠𝐮𝐚 𝐫𝐮𝐬𝐚 𝐦𝐨𝐝𝐞𝐫𝐧𝐚\u201d, \u201c𝐂𝐮𝐫𝐬𝐨 𝐩𝐫\u00e1𝐜𝐭𝐢𝐜𝐨 𝐝𝐞 𝐫𝐮𝐬𝐨 (𝐀𝟏, 𝐀𝟐)\u201d y \u201c𝐏𝐫𝐞𝐩𝐚𝐫𝐚𝐜𝐢\u00f3𝐧 𝐩𝐚𝐫𝐚 𝐞𝐥 𝐓𝐑𝐊𝐈\u201d." },
+        { texto: "Estos cursos, implementados en la 𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐝𝐚𝐝 𝐄𝐬𝐭𝐚𝐭𝐚𝐥 𝐝𝐞 𝐌𝐨𝐬𝐜\u00fa, son un testimonio de su profundo conocimiento y compromiso con la ense\u00f1anza del ruso, brindando recursos valiosos tanto para estudiantes como para otros educadores en el campo.🌍📊" },
+        { texto: "La profesora Zhaboklitskaya ha demostrado tambi\u00e9n una s\u00f3lida experiencia en la formaci\u00f3n para la ense\u00f1anza de los profesores de idioma ruso a trav\u00e9s de sus 𝐧𝐮𝐦𝐞𝐫𝐨𝐬𝐚𝐬 𝐩𝐮𝐛𝐥𝐢𝐜𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐚𝐜𝐚𝐝𝐞\u0301𝐦𝐢𝐜𝐚𝐬." },
+        { texto: "Su trabajo abarca una amplia gama de temas relevantes para la ense\u00f1anza del idioma, 𝐢𝐧𝐜𝐥𝐮𝐲𝐞𝐧𝐝𝐨 𝐥𝐚 𝐞𝐧𝐬𝐞\u00f1𝐚𝐧𝐳𝐚 𝐝𝐞𝐥 𝐢𝐝𝐢𝐨𝐦𝐚 𝐫𝐮𝐬𝐨 𝐞𝐧 𝐞𝐧𝐭𝐨𝐫𝐧𝐨𝐬 𝐨𝐧𝐥𝐢𝐧𝐞 (𝟐𝟎𝟐𝟐)." },
+        { texto: "\u2728 Ha contribuido significativamente al campo con estudios sobre la orientaci\u00f3n cultural en textos educativos y el uso de tareas l\u00fadicas en el aula." },
+        { texto: "𝐇𝐚 𝐬𝐢𝐝𝐨 𝐩𝐨𝐧𝐞𝐧𝐭𝐞 𝐞𝐧 𝐜𝐨𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐢𝐚𝐬 𝐢𝐧𝐭𝐞𝐫𝐧𝐚𝐜𝐢𝐨𝐧𝐚𝐥𝐞𝐬, exponiendo sobre la ense\u00f1anza del ruso como un medio esencial para la comunicaci\u00f3n intercultural." },
+        { texto: "Estas contribuciones no solo enriquecen la literatura acad\u00e9mica, sino que tambi\u00e9n proporcionan valiosas herramientas pr\u00e1cticas para educadores en el campo del ruso como lengua extranjera, reflejando su dedicaci\u00f3n a mejorar constantemente las metodolog\u00edas de ense\u00f1anza.🏆" },
+        { texto: "\u272f \u00bf𝐏𝐨𝐫 𝐪𝐮\u00e9 𝐚𝐩𝐫𝐞𝐧𝐝𝐞𝐫 𝐫𝐮𝐬𝐨 𝐜𝐨𝐧 𝐞𝐥𝐥𝐚?\n🎯 𝐀𝐭𝐞𝐧𝐜𝐢\u00f3𝐧 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐥𝐢𝐳𝐚𝐝𝐚: Nuestras clases est\u00e1n limitadas a 𝐦\u00a1𝐱𝐢𝐦𝐨 𝟓 𝐚𝐥𝐮𝐦𝐧𝐨𝐬, lo que garantiza que cada estudiante reciba la atenci\u00f3n y el apoyo necesario." }
     ],
     logros: [
-      "✨ 30+ años de experiencia enseñando ruso como lengua extranjera.",
-      "🏛️ Catedrática en el Departamento de Ruso como Lengua Extranjera de la Universidad Estatal de Moscú.",
-      "📘 Autora de cinco cursos fundamentales de enseñanza del ruso.",
-      "✅ Especialista en preparación para exámenes oficiales como el TRKI.",
-      "🌍 Ponente en conferencias internacionales sobre innovación en enseñanza de idiomas.",
+        "30+ a\u00f1os de experiencia en la ense\u00f1anza del ruso como lengua extranjera.",
+        "Catedr\u00e1tica en la Universidad Estatal de Mosc\u00fa.",
+        "Autora de cinco cursos fundamentales de ruso como lengua extranjera.",
+        "Especialista en preparaci\u00f3n para ex\u00e1menes oficiales como el TRKI.",
+        "Ponente en conferencias internacionales sobre innovaci\u00f3n en la ense\u00f1anza de idiomas."
     ],
-  
     imagen: "imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
     backgroundColor: bg_color,
     fontColor: font_color,
-    botonTexto: "Descubre más",
+    botonTexto: "Descubre m\u00e1s",
     botonLink: "/courses/Ruso/#Profesora-Irena",
     mostrarBordes: true,
     mostrarBoton: true,
     backgroundColorSecond: bg_color2,
-  };
+    posicion:"center",
+}
 
   return (
     <div>
@@ -167,6 +175,7 @@ const AboutPage = () => {
         mostrarBordes={profesoraDataAbout.mostrarBordes}
         mostrarBoton={profesoraDataAbout.mostrarBoton}
         backgroundColorSecond={profesoraDataAbout.backgroundColorSecond}
+        posicion={profesoraDataAbout.posicion}
       />
 
       {/* <MisionVision
