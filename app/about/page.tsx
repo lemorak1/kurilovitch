@@ -175,7 +175,7 @@ const AboutPage = () => {
         mostrarBordes={profesoraDataAbout.mostrarBordes}
         mostrarBoton={profesoraDataAbout.mostrarBoton}
         backgroundColorSecond={profesoraDataAbout.backgroundColorSecond}
-        posicion={profesoraDataAbout.posicion}
+        posicion="center"
       />
 
       {/* <MisionVision
