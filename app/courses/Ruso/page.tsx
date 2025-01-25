@@ -126,7 +126,7 @@ const CursoRuso = () => {
   ];
 
   const profesoraDataRuso = {
-    id: "#Profesora-Irena",
+    id: "Profesora-Irena",
     titulo: "Nuestra Instructora Principal",
     parrafos: [
       { texto: "La Prof. Irena Zhaboklitskaya lidera el programa de ruso, con un enfoque único que combina experiencia y pasión por la enseñanza." },
@@ -145,7 +145,7 @@ const CursoRuso = () => {
     backgroundColor: "#304d6d",
     fontColor: "#ffffff",
     botonTexto: "Ver más detalles",
-    botonLink: "/about",
+    botonLink: "/about#Profesora-Irena",
     mostrarBordes: true,
   };
 
@@ -204,8 +204,8 @@ const CursoRuso = () => {
         ))}
         {/* Sección de la Profesora */}
         <TextoImagen
-        key="100"
-         id={profesoraDataRuso.id.substring(1)}
+       
+         id={profesoraDataRuso.id}
           titulo={profesoraDataRuso.titulo}
           parrafos={profesoraDataRuso.parrafos}
           logros={profesoraDataRuso.logros}

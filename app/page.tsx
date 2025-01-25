@@ -274,13 +274,7 @@ const Home = () => {
       buttonLabel: "Ver más",
       onButtonClick: () => alert("Curso de Ruso"),
     },
-    {
-      title: "Francés",
-      description:
-        "Domina el francés y abre las puertas a oportunidades en más de 29 países francófonos. Clases dinámicas y preparación para certificaciones DELF.",
-      buttonLabel: "Ver más",
-      onButtonClick: () => alert("Curso de Francés"),
-    },
+  
   ];
   
   const sectionsData = [

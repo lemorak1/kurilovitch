@@ -79,7 +79,7 @@ const AboutPage = () => {
 
   {/* Sección de la Profesora */ }
   const profesoraDataAbout = {
-    id: "#Profesora-Irena",
+    id: "Profesora-Irena",
     titulo: "Conoce a la Profesora Irena Zhaboklitskaya",
     parrafos: [
       { texto: "🌟 La Prof. Irena Zhaboklitskaya, catedrática de la Universidad Estatal de Moscú, es una experta reconocida internacionalmente en la enseñanza del idioma ruso como lengua extranjera." },
@@ -101,7 +101,7 @@ const AboutPage = () => {
     backgroundColor: bg_color,
     fontColor: font_color,
     botonTexto: "Descubre más",
-    botonLink: "/courses/Ruso",
+    botonLink: "/courses/Ruso/#Profesora-Irena",
     mostrarBordes: true,
     mostrarBoton: true,
     backgroundColorSecond: bg_color2,
