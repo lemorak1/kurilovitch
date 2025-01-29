@@ -372,7 +372,7 @@ const Home = () => {
         />
          
 
-         <InstagramFeed accessToken="TU_TOKEN_DE_ACCESO_AQUÍ" />
+         <InstagramFeed accessToken={process.env.NEXT_PUBLIC_IG_TOKEN_IG_TOKEN} />
 
       {/* FAQ Section */}
       <FAQSection faqs={faqs} backgroundColor={bg_color} fontColor={font_color} />
