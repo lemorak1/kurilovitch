@@ -372,10 +372,17 @@ const Home = () => {
         />
          
 
-         <InstagramFeed accessToken={process.env.NEXT_PUBLIC_IG_TOKEN_IG_TOKEN} />
+         <InstagramFeed accessToken={process.env.NEXT_PUBLIC_IG_TOKEN_IG_TOKEN} 
+         bg_color={bg_color} 
+         text_color={font_color}
+         bg_color2={backgroundColorSecond}
+         arrow_color={font_color}
+        //  max_lines={2}
+
+         />
 
       {/* FAQ Section */}
-      <FAQSection faqs={faqs} backgroundColor={bg_color} fontColor={font_color} />
+      <FAQSection faqs={faqs} backgroundColor={bg_color} fontColor={font_color}  />
 
  
     </>
