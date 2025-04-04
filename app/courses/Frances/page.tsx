@@ -29,25 +29,25 @@ const CursoFrances = () => {
     {
       level: "Curso Completo de Francés Intensivo",
       description: "Niveles A1-A2-B1 con Preparación para Certificaciones DELF/DALF. Curso intensivo para un dominio sólido en 6 meses.",
-      image: "/imagenes/Courses/Frances/P_CompletoFrances.jpg",
+      image: "/imagenes/Courses/Frances/P_CompletoFrances.webp",
       links: [{ text: "Más información", href: "#curso-completo-intensivo-frances" }],
     },
     {
       level: "Curso de Francés para Niños",
       description: "Curso diseñado para niños con juegos, canciones y material didáctico interactivo.",
-      image: "/imagenes/Courses/Frances/P_NiñosFrances.jpg",
+      image: "/imagenes/Courses/Frances/P_NiñosFrances.webp",
       links: [{ text: "Más información", href: "#curso-ninos-frances" }],
     },
     {
       level: "Curso Intensivo de Conversación en Francés",
       description: "Cursos para mejorar la fluidez verbal y comprensión auditiva, desde nivel A1 a B2.",
-      image: "/imagenes/Courses/Frances/P_ConversacionFrances.jpg",
+      image: "/imagenes/Courses/Frances/P_ConversacionFrances.webp",
       links: [{ text: "Más información", href: "#curso-conversacion-frances" }],
     },
     {
       level: "Curso de Preparación para Certificaciones DELF/DALF",
       description: "Curso especializado para obtener certificaciones oficiales DELF y DALF.",
-      image: "/imagenes/Courses/Frances/P_CertificacionFrances.jpg",
+      image: "/imagenes/Courses/Frances/P_CertificacionFrances.webp",
       links: [{ text: "Más información", href: "#curso-certificacion-frances" }],
     },
   ];
@@ -57,7 +57,7 @@ const CursoFrances = () => {
       {/* Sección Principal */}
       <section className="relative h-screen flex items-center justify-center text-white">
         <Image
-          src="/imagenes/Courses/Frances/P_PrincipalFrances.jpg"
+          src="/imagenes/Courses/Frances/P_PrincipalFrances.webp"
           alt="Curso de Francés"
           fill
           quality={75}
@@ -88,7 +88,7 @@ const CursoFrances = () => {
           { subtitulo: "Ventajas", texto: "• Domina el francés en 6 meses \n• Máximo 5 estudiantes por clase \n• Métodos de enseñanza dinámicos" },
           { subtitulo: "Duración y Costo", texto: "• Duración: 6 meses \n• Costo: $1500" }
         ]}
-        imagen="/imagenes/Courses/Frances/P_CompletoFrances.jpg"
+        imagen="/imagenes/Courses/Frances/P_CompletoFrances.webp"
         backgroundColor={bg_color}
         fontColor={font_color}
         posicion="right"
@@ -102,7 +102,7 @@ const CursoFrances = () => {
           { subtitulo: "Ventajas", texto: "• Clases lúdicas y visuales \n• Atención personalizada \n• Material didáctico incluido" },
           { subtitulo: "Duración y Costo", texto: "• Duración: 8 semanas \n• Costo: $600" }
         ]}
-        imagen="/imagenes/Courses/Frances/P_NiñosFrances.jpg"
+        imagen="/imagenes/Courses/Frances/P_NiñosFrances.webp"
         backgroundColor={bg_color}
         fontColor={font_color}
         posicion="left"
@@ -116,7 +116,7 @@ const CursoFrances = () => {
           { subtitulo: "Ventajas", texto: "• Simulaciones de situaciones reales \n• Corrección en tiempo real \n• Fluidez y confianza al hablar" },
           { subtitulo: "Duración y Costo", texto: "• Duración: 6 semanas \n• Costo: $700" }
         ]}
-        imagen="/imagenes/Courses/Frances/P_ConversacionFrances.jpg"
+        imagen="/imagenes/Courses/Frances/P_ConversacionFrances.webp"
         backgroundColor={bg_color}
         fontColor={font_color}
         posicion="right"
@@ -130,7 +130,7 @@ const CursoFrances = () => {
           { subtitulo: "Ventajas", texto: "• Simulacros de examen \n• Material oficial de examen \n• Clases personalizadas" },
           { subtitulo: "Duración y Costo", texto: "• Duración: 6 semanas \n• Costo: $700" }
         ]}
-        imagen="/imagenes/Courses/Frances/P_CertificacionFrances.jpg"
+        imagen="/imagenes/Courses/Frances/P_CertificacionFrances.webp"
         backgroundColor={bg_color}
         fontColor={font_color}
         posicion="left"

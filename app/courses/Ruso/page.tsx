@@ -29,7 +29,7 @@ const CursoRuso = () => {
   //     {
   //         level: "Curso de Ruso Nivel A1",
   //         description: "Curso de introducción al ruso, diseñado para principiantes con un enfoque estructurado y efectivo.",
-  //         image: "/imagenes/Courses/Ruso/P_A1_Ruso.jpg",
+  //         image: "/imagenes/Courses/Ruso/P_A1_Ruso.webp",
   //         links: [{ text: "Más información", href: "#curso-a1-ruso" }],
   //         cost: "$720",
   //         duration: "3 meses",
@@ -45,7 +45,7 @@ const CursoRuso = () => {
   //     {
   //         level: "Curso de Ruso Nivel A2",
   //         description: "Curso diseñado para quienes ya tienen una base en ruso y desean ampliar su vocabulario y comprensión.",
-  //         image: "/imagenes/Courses/Ruso/P_A2_Ruso.jpg",
+  //         image: "/imagenes/Courses/Ruso/P_A2_Ruso.webp",
   //         links: [{ text: "Más información", href: "#curso-a2-ruso" }],
   //         cost: "$720",
   //         duration: "3 meses",
@@ -60,7 +60,7 @@ const CursoRuso = () => {
   //     {
   //         level: "Curso de Ruso Nivel B1 (Privado)",
   //         description: "Curso intermedio-avanzado con atención 100% personalizada, ideal para perfeccionar la fluidez y comprensión.",
-  //         image: "/imagenes/Courses/Ruso/P_B1_Ruso.jpg",
+  //         image: "/imagenes/Courses/Ruso/P_B1_Ruso.webp",
   //         links: [{ text: "Más información", href: "#curso-b1-ruso" }],
   //         cost: "$1300",
   //         duration: "30 horas",
@@ -78,7 +78,7 @@ const CursoRuso = () => {
     {
       level: "Curso de Ruso Nivel A1",
       description: "Curso diseñado por la reconocida Prof. Irena Zhaboklitskaya, ideal para principiantes que buscan una base sólida en ruso con un enfoque estructurado y efectivo.",
-      image: "/imagenes/Courses/Ruso/P_A1_Ruso.jpg",
+      image: "/imagenes/Courses/Ruso/P_A1_Ruso.webp",
       links: [{ text: "Más información", href: "#curso-a1-ruso" }],
       cost: "$720",
       duration: "3 meses",
@@ -94,7 +94,7 @@ const CursoRuso = () => {
     {
       level: "Curso de Ruso Nivel A2",
       description: "Curso diseñado para quienes ya tienen una base en ruso y desean ampliar su vocabulario y comprensión, guiados por la experiencia de la Prof. Irena Zhaboklitskaya.",
-      image: "/imagenes/Courses/Ruso/P_A2_Ruso.jpg",
+      image: "/imagenes/Courses/Ruso/P_A2_Ruso.webp",
       links: [{ text: "Más información", href: "#curso-a2-ruso" }],
       cost: "$720",
       duration: "3 meses",
@@ -110,7 +110,7 @@ const CursoRuso = () => {
     {
       level: "Curso de Ruso Nivel B1 (Privado)",
       description: "Curso avanzado guiado por la prestigiosa Prof. Irena Zhaboklitskaya, diseñado para perfeccionar tus habilidades de comprensión y fluidez.",
-      image: "/imagenes/Courses/Ruso/P_B1_Ruso.jpg",
+      image: "/imagenes/Courses/Ruso/P_B1_Ruso.webp",
       links: [{ text: "Más información", href: "#curso-b1-ruso" }],
       cost: "$1300",
       duration: "30 horas",
@@ -141,7 +141,7 @@ const CursoRuso = () => {
       "🌍 Ponente en conferencias internacionales sobre innovación en enseñanza de idiomas.",
     ],
   
-    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
+    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.webp",
     backgroundColor: "#304d6d",
     fontColor: "#ffffff",
     botonTexto: "Ver más detalles",
@@ -157,12 +157,12 @@ const CursoRuso = () => {
         <meta name="description" content="Domina el ruso con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
         <meta property="og:title" content="Curso Intensivo de Ruso - Kourilovitch Institute" />
         <meta property="og:description" content="Domina el ruso con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
-        <meta property="og:image" content="/imagenes/Courses/Ruso/P_CompletoRuso.jpg" />
+        <meta property="og:image" content="/imagenes/Courses/Ruso/P_CompletoRuso.webp" />
       </Head>
       <div>
         <section className="relative h-screen flex items-center justify-center text-white">
           <Image
-            src="/imagenes/Courses/Ruso/P_Principal_Ruso.jpg"
+            src="/imagenes/Courses/Ruso/P_Principal_Ruso.webp"
             alt="Curso Intensivo de Ruso"
             fill
             quality={75}
@@ -217,10 +217,10 @@ const CursoRuso = () => {
           mostrarBordes={profesoraDataRuso.mostrarBordes}
         />
 
-        <FormularioAgendarClase
+        {/* <FormularioAgendarClase
           colorFondo={bg_color}
           curso="Agenda una clase gratuita en nuestro Curso Intensivo de Ruso"
-        />
+        /> */}
       </div>
     </>
   );

@@ -29,7 +29,7 @@ const CursoIngles = () => {
     <div>
       <section className="relative h-screen bg-blue-500 text-white flex items-center justify-center">
         <img
-          src="/imagenes/Courses/Aleman/P_PrincipalAleman.jpg"
+          src="/imagenes/Courses/Aleman/P_PrincipalAleman.webp"
           alt="Curso de Aleman"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -47,7 +47,7 @@ const CursoIngles = () => {
           { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
           { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
         ]}
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-1.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-1.webp"
         posicion="left"
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
@@ -59,7 +59,7 @@ const CursoIngles = () => {
           { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
           { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
         ]}
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.webp"
         posicion="right"
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
@@ -70,7 +70,7 @@ const CursoIngles = () => {
           { texto: "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas.", subtitulo: "Nuestra Filosofía" },
           { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
           { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
-        ]} imagen="/imagenes/Courses/Ingles/ingles-profesor-3.jpg"
+        ]} imagen="/imagenes/Courses/Ingles/ingles-profesor-3.webp"
         posicion="left"
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado

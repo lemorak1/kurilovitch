@@ -29,7 +29,7 @@ const CursoEspañol = () => {
     {
         level: "Curso Intensivo de Español Nivel A1",
         description: "Curso diseñado para principiantes, proporcionando una base sólida para la comunicación en español.",
-        image: "/imagenes/Courses/Espanol/P_A1Espanol.jpg",
+        image: "/imagenes/Courses/Espanol/P_A1Espanol.webp",
         links: [{ text: "Más información", href: "#curso-a1-espanol" }],
         cost: "$800",
         duration: "11 semanas",
@@ -44,7 +44,7 @@ const CursoEspañol = () => {
     {
         level: "Curso Intensivo de Español Nivel A2",
         description: "Curso para quienes desean consolidar sus conocimientos básicos y avanzar hacia una comunicación más fluida.",
-        image: "/imagenes/Courses/Espanol/P_A2Espanol.jpg",
+        image: "/imagenes/Courses/Espanol/P_A2Espanol.webp",
         links: [{ text: "Más información", href: "#curso-a2-espanol" }],
         cost: "$800",
         duration: "11 semanas",
@@ -66,12 +66,12 @@ const CursoEspañol = () => {
         <meta name="description" content="Domina el español con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
         <meta property="og:title" content="Curso Intensivo de Español - Kourilovitch Institute" />
         <meta property="og:description" content="Domina el español con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
-        <meta property="og:image" content="/imagenes/Courses/Espanol/P_A1_Espanol.jpg" />
+        <meta property="og:image" content="/imagenes/Courses/Espanol/P_A1_Espanol.webp" />
       </Head>
       <div>
         <section className="relative h-screen flex items-center justify-center text-white">
           <Image
-            src="/imagenes/Courses/Espanol/P_PrincipalEspanol.jpg"
+            src="/imagenes/Courses/Espanol/P_PrincipalEspanol.webp"
             alt="Curso Intensivo de Español"
             fill
             quality={75}

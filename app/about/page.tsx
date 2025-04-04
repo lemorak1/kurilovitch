@@ -97,7 +97,7 @@ const AboutPage = () => {
         "Especialista en preparaci\u00f3n para ex\u00e1menes oficiales como el TRKI.",
         "Ponente en conferencias internacionales sobre innovaci\u00f3n en la ense\u00f1anza de idiomas."
     ],
-    imagen: "imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
+    imagen: "imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.webp",
     backgroundColor: bg_color,
     fontColor: font_color,
     botonTexto: "Descubre m\u00e1s",
@@ -186,7 +186,7 @@ const AboutPage = () => {
           { texto: "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando fluidez y contexto cultural." },
           { texto: "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.", subtitulo: "Oportunidades" },
         ]}
-        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.jpg"
+        imagen="/imagenes/Courses/Ingles/ingles-profesor-2.webp"
         posicion="right"
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado

@@ -84,7 +84,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <img
-              src="/imagenes/Logo_Horizontal.png"
+              src="/imagenes/Logo_Horizontal.webp"
               alt="Logo"
               className={`${styles.logoImg} h-15 cursor-pointer`}
             />

@@ -29,7 +29,7 @@ const CursoItaliano = () => {
     {
         level: "Curso Intensivo de Italiano Nivel A1",
         description: "Curso diseñado para principiantes que desean aprender italiano desde cero con un enfoque comunicativo y cultural.",
-        image: "/imagenes/Courses/Italiano/P_A1_Italiano.jpg",
+        image: "/imagenes/Courses/Italiano/P_A1_Italiano.webp",
         links: [{ text: "Más información", href: "#curso-a1-italiano" }],
         cost: "$500",
         duration: "5 semanas",
@@ -44,7 +44,7 @@ const CursoItaliano = () => {
     {
         level: "Curso Intensivo de Italiano Nivel A2",
         description: "Curso para quienes completaron el nivel A1 y desean avanzar con un enfoque práctico y comunicativo.",
-        image: "/imagenes/Courses/Italiano/P_A2_Italiano.jpg",
+        image: "/imagenes/Courses/Italiano/P_A2_Italiano.webp",
         links: [{ text: "Más información", href: "#curso-a2-italiano" }],
         cost: "$500",
         duration: "5 semanas",
@@ -59,7 +59,7 @@ const CursoItaliano = () => {
     {
         level: "Curso Intensivo de Italiano Nivel B1",
         description: "Curso intermedio diseñado para mejorar la fluidez y comprensión del idioma italiano.",
-        image: "/imagenes/Courses/Italiano/P_B1_Italiano.jpg",
+        image: "/imagenes/Courses/Italiano/P_B1_Italiano.webp",
         links: [{ text: "Más información", href: "#curso-b1-italiano" }],
         cost: "$740",
         duration: "3 meses",
@@ -82,12 +82,12 @@ const CursoItaliano = () => {
         <meta name="description" content="Domina el italiano con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
         <meta property="og:title" content="Curso Intensivo de Italiano - Kourilovitch Institute" />
         <meta property="og:description" content="Domina el italiano con nuestro curso intensivo del Kourilovitch Institute y expande tus habilidades comunicativas." />
-        <meta property="og:image" content="/imagenes/Courses/Italiano/P_CompletoItaliano.jpg" />
+        <meta property="og:image" content="/imagenes/Courses/Italiano/P_CompletoItaliano.webp" />
       </Head>
       <div>
         <section className="relative h-screen flex items-center justify-center text-white">
           <Image
-            src="/imagenes/Courses/Italiano/P_Principal_Italiano.jpg"
+            src="/imagenes/Courses/Italiano/P_Principal_Italiano.webp"
 
             alt="Curso Intensivo de Italiano"
             
@@ -124,10 +124,10 @@ const CursoItaliano = () => {
           />
         ))}
 
-        <FormularioAgendarClase
+        {/* <FormularioAgendarClase
           colorFondo={bg_color}
           curso="Agenda una clase gratuita en nuestro Curso Intensivo de Italiano"
-        />
+        /> */}
       </div>
     </>
   );

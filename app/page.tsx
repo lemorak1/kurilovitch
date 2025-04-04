@@ -37,7 +37,7 @@
 //       parrafos: [
 //         "En Kourilovitch Institute, creemos que aprender un idioma va más allá de memorizar palabras: es un viaje hacia nuevas culturas, ideas y formas de ver el mundo.",
 //       ],
-//       imagenUrl: "/imagenes/instituto.jpg", // Imagen para esta sección
+//       imagenUrl: "/imagenes/instituto.webp", // Imagen para esta sección
 //       posicionImagen: "left",
 //     },
 //     {
@@ -45,7 +45,7 @@
 //       parrafos: [
 //         "Fundado en una tradición de excelencia y con un enfoque en la inmersión cultural, nuestro instituto ofrece clases de ruso, italiano, alemán y español, impartidas por profesores nativos altamente calificados.",
 //       ],
-//       imagenUrl: "/imagenes/filosofia.jpg",
+//       imagenUrl: "/imagenes/filosofia.webp",
 //       posicionImagen: "right",
 //     },
 //     {
@@ -54,7 +54,7 @@
 //         "Cada curso está diseñado para sumergirte en la lengua y cultura que elijas, asegurando que puedas comunicarte con fluidez y comprender el contexto cultural del idioma.",
 //         "Nuestros grupos reducidos y la atención personalizada nos permiten acompañarte en cada paso, ajustando nuestra metodología a tus objetivos personales y ritmo de aprendizaje.",
 //       ],
-//       imagenUrl: "/imagenes/metodologia.jpg",
+//       imagenUrl: "/imagenes/metodologia.webp",
 //       posicionImagen: "left",
 //     },
 //     {
@@ -63,7 +63,7 @@
 //         "¿Tienes curiosidad por idiomas poco comunes? En Kourilovitch Institute también te ofrecemos la opción de explorar lenguas como el polaco, húngaro, y más.",
 //         "Si el idioma que buscas no está en nuestro catálogo, ¡consúltanos! Nos comprometemos a encontrar al mejor profesor para tu aprendizaje.",
 //       ],
-//       imagenUrl: "/imagenes/idiomas.jpg",
+//       imagenUrl: "/imagenes/idiomas.webp",
 //       posicionImagen: "right",
 //     },
 //     {
@@ -71,7 +71,7 @@
 //       parrafos: [
 //         "Únete a nosotros y descubre cómo dominar un idioma puede abrirte un mundo lleno de oportunidades.",
 //       ],
-//       imagenUrl: "/imagenes/unete.jpg",
+//       imagenUrl: "/imagenes/unete.webp",
 //       posicionImagen: "left",
 //     },
 //   ];
@@ -146,7 +146,7 @@
 //   titulo="¡Domina el Alemán!"
 //   textoDestacado="Curso intensivo comienza en diciembre. ¡Promociones exclusivas al separar su cupo hasta el 25 de noviembre!"
 //   descripcion="¡Es tu momento de aprender alemán! Únete a nuestro curso intensivo que empieza la semana del 9 de diciembre y adquiere fluidez con profesores expertos y grupos reducidos. Tanto en modalidad online como presencial en Cuenca, te preparamos para los niveles A1, A2, B1 y el examen de certificación Goethe. ¡Reserva tu cupo antes del 25 de noviembre y disfruta de descuentos especiales!"
-//   imagen="/imagenes/Courses/Aleman/P_CompletoAleman.jpg"
+//   imagen="/imagenes/Courses/Aleman/P_CompletoAleman.webp"
 //   posicion="left"
 //   backgroundColor="#ffb100"
 //    fontColor="#333333"
@@ -320,7 +320,7 @@ const Home = () => {
       "🌍 Ponente en conferencias internacionales sobre innovación en enseñanza de idiomas.",
     ],
   
-    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.jpg",
+    imagen: "/imagenes/Profesores/Irena_Zhaboklitskaya/Irena1.webp",
     backgroundColor: bg_color,
     fontColor: font_color,
     botonTexto: "Leer más",
