@@ -109,10 +109,10 @@ const CursoEspañol = () => {
           />
         ))}
 
-        <FormularioAgendarClase
+        {/* <FormularioAgendarClase
           colorFondo={bg_color}
           curso="Agenda una clase gratuita en nuestro Curso Intensivo de Español"
-        />
+        /> */}
       </div>
     </>
   );

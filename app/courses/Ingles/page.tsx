@@ -75,7 +75,7 @@ const CursoIngles = () => {
         backgroundColor={bg_color} // Color de fondo personalizado
         fontColor="#01579b" // Color de texto personalizado
       />
-      <FormularioAgendarClase colorFondo={bg_color} curso="Agenda una clase gratuita en Curso de Inglés" />
+      {/* <FormularioAgendarClase colorFondo={bg_color} curso="Agenda una clase gratuita en Curso de Inglés" /> */}
 
     </div>
   );

@@ -137,10 +137,10 @@ const CursoFrances = () => {
       />
 
       {/* Formulario para agendar clase */}
-      <FormularioAgendarClase
+      {/* <FormularioAgendarClase
         colorFondo={bg_color}
         curso="Agenda una clase gratuita en Curso de Francés"
-      />
+      /> */}
     </div>
   );
 };
