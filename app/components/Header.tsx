@@ -74,6 +74,10 @@ const Header = () => {
     };
   }, [menuOpen]);
 
+  const handleClick = () => {
+    window.open('https://srv763830.hstgr.cloud/login/index.php', '_blank')
+  }
+
   return (
     <header
       className={styles.header}
@@ -168,12 +172,12 @@ const Header = () => {
 
         {/* Botones Login y Sign Up */}
         <div className="hidden md:flex space-x-4">
-          <button className="px-4 py-2 bg-blue-500 text-white rounded">
+          <button className="px-8 py-2 bg-blue-500 text-white rounded" onClick={()=>handleClick()}>
             Login
           </button>
-          <button className="px-4 py-2 bg-green-500 text-white rounded">
+          {/* <button className="px-4 py-2 bg-green-500 text-white rounded">
             Sign Up
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -252,12 +256,12 @@ const Header = () => {
               </div>
             ))}
             <div className="mt-4 flex space-x-4">
-              <button className="w-full px-4 py-2 bg-blue-500 text-white rounded">
+              <button className="w-full px-8 py-2 bg-blue-500 text-white rounded" onClick={()=>handleClick()}>
                 Login
               </button>
-              <button className="w-full px-4 py-2 bg-green-500 text-white rounded">
+              {/* <button className="w-full px-4 py-2 bg-green-500 text-white rounded">
                 Sign Up
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
